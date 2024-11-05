@@ -1,2 +1,2 @@
 # Desktop_JavaFx_ArtyVenci
-L'application vise à créer une galerie en ligne pour promouvoir les artistes du monde entier et faciliter la découverte, l'achat et le partage d'œuvres d'art. 
+The application aims to create an online gallery to promote artists from around the world and facilitate the discovery, purchase, and sharing of artwork.
