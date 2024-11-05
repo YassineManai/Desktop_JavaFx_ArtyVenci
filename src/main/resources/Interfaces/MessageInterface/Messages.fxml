@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720" prefWidth="1280" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Asma_Controllers.MessagesController">
+    <children>
+        <ImageView fitHeight="894.0" fitWidth="1385.0" layoutX="-22.0" layoutY="-29.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../images/Background.png" />
+            </image>
+        </ImageView>
+
+        <ToolBar nodeOrientation="LEFT_TO_RIGHT" prefHeight="96.0" prefWidth="1363.0" style="-fx-background-color: #FFFFFF;">
+            <items>
+                <ImageView fitHeight="86.0" fitWidth="112.0" pickOnBounds="true">
+                    <image>
+                        <Image url="@../../images/logo.PNG" />
+                    </image>
+                </ImageView>
+                <Button mnemonicParsing="false" onAction="#Go_To_Home" prefHeight="44.0" prefWidth="117.0" style="-fx-background-color: #FFFFFF;" text="Accueil">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Button>
+                <Button layoutX="120.0" layoutY="12.0" mnemonicParsing="false" onAction="#Go_To_Product" prefHeight="44.0" prefWidth="145.0" style="-fx-background-color: #FFFFFF;" text="Magasin">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Button>
+                <Button layoutX="213.0" layoutY="27.0" mnemonicParsing="false" onAction="#Go_To_Auction" prefHeight="44.0" prefWidth="101.0" style="-fx-background-color: #FFFFFF;" text="Enchére">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Button>
+                <Button layoutX="213.0" layoutY="12.0" mnemonicParsing="false" onAction="#Go_To_Forum" prefHeight="44.0" prefWidth="106.0" style="-fx-background-color: #FFFFFF;" text="Forum">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Button>
+                <Button layoutX="318.0" layoutY="12.0" mnemonicParsing="false" onAction="#Go_To_Event" prefHeight="44.0" prefWidth="143.0" style="-fx-background-color: #FFFFFF;" text="Evènements">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Button>
+                <Button layoutX="405.0" layoutY="12.0" mnemonicParsing="false" onAction="#Go_To_Message" prefHeight="44.0" prefWidth="155.0" style="-fx-background-color: #FFFFFF;" text="Messagerie" textFill="#0076a8">
+                    <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                    </font>
+                </Button>
+                <Button layoutX="1121.0" layoutY="31.0" mnemonicParsing="false" style="-fx-background-color: #FFFFFF;">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Button>
+                <ImageView fx:id="bell" fitHeight="39.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                    <image>
+                        <Image url="@../../images/bell.png" />
+                    </image>
+                </ImageView>
+                <ImageView fx:id="usericon" fitHeight="38.0" fitWidth="58.0" onMouseClicked="#ProfileVisit" pickOnBounds="true" preserveRatio="true" visible="false">
+                    <image>
+                        <Image url="@../../images/pers.PNG" />
+                    </image>
+                </ImageView>
+                <Label fx:id="nav_name" prefHeight="38.0" prefWidth="97.0" text="Bienvenue!">
+                    <font>
+                        <Font name="Bell MT Italic" size="22.0" />
+                    </font>
+                </Label>
+                <Button fx:id="inscrire" mnemonicParsing="false" onAction="#sinscrire" prefHeight="40.0" prefWidth="82.0" style="-fx-background-color: #0076A8; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="S'inscrire" textFill="WHITE" visible="false">
+                    <font>
+                        <Font name="Comic Sans MS" size="12.0" />
+                    </font>
+                </Button>
+                <ImageView fx:id="logouticon" fitHeight="36.0" fitWidth="42.0" onMouseClicked="#Logout" pickOnBounds="true" preserveRatio="true" visible="false">
+                    <image>
+                        <Image url="@../../images/arrow.png" />
+                    </image>
+                </ImageView>
+            </items>
+        </ToolBar>
+
+        <!--> hedha l tebe3ha <-->
+
+        <Button fx:id="signal" layoutX="1141.0" layoutY="168.0" mnemonicParsing="false" onAction="#signalerMessage" prefHeight="66.0" prefWidth="64.0" style="-fx-background-color: #B4DBDC;" textAlignment="CENTER">
+            <font>
+                <Font name="System Bold Italic" size="20.0" />
+            </font>
+            <graphic>
+
+                <ImageView fitHeight="53.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../images/signaler.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+
+        <ScrollPane fx:id="messages" layoutX="143.0" layoutY="217.0" prefHeight="445.0" prefWidth="943.0" style="-fx-background-color: #B4DBDC;">
+            <content>
+                <VBox fx:id="Msg" prefHeight="89.0" prefWidth="942.0" style="-fx-background-color: #B4DBDC;" />
+            </content>
+        </ScrollPane>
+
+        <TextField fx:id="msg" layoutX="141.0" layoutY="650.0" prefHeight="44.0" prefWidth="943.0" style="-fx-background-color: #B4DBDC;">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </TextField>
+        <Button fx:id="Envoi" layoutX="1094.0" layoutY="642.0" mnemonicParsing="false" onAction="#EnvoyerMsg" prefHeight="54.0" prefWidth="117.0" style="-fx-background-color: #B4DBDC;" text="Envoyer">
+            <font>
+                <Font name="System Bold Italic" size="20.0" />
+            </font>
+        </Button>
+        <Button fx:id="returnbtn" layoutX="35.0" layoutY="203.0" mnemonicParsing="false" onAction="#returnAction" style="-fx-background-color: transparent;">
+            <graphic>
+                <ImageView fitHeight="46.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../images/fleche-gauche.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button fx:id="delete" layoutX="1145.0" layoutY="262.0" mnemonicParsing="false" onAction="#deleteDiscussion" prefHeight="66.0" prefWidth="79.0" style="-fx-background-color: #B4DBDC;" textAlignment="CENTER">
+            <font>
+                <Font name="System Bold Italic" size="20.0" />
+            </font>
+            <graphic>
+                <ImageView fitHeight="44.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../images/delete.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+    </children>
+</AnchorPane>

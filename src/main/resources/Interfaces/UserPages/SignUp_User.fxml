@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.SubScene?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="360.0" minWidth="360.0" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #d5f5d5;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Yassine_Controllers.SignUpController">
+    <ImageView fitHeight="729.0" fitWidth="1495.0" layoutX="-210.0" layoutY="-6.0">
+        <Image url="@../../images/Background.png" />
+    </ImageView>
+    <ImageView fitHeight="420.0" fitWidth="494.0" layoutX="251.0" layoutY="143.0" opacity="0.9" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../../images/Frame%208.png" />
+        </image>
+    </ImageView>
+    <ImageView fitHeight="420.0" fitWidth="398.0" layoutX="649.0" layoutY="143.0" opacity="0.8" pickOnBounds="true">
+        <image>
+            <Image url="@../../images/Capture%20d'écran%202024-01-27%20235552%202%20(1).png" />
+        </image>
+    </ImageView>
+    <ImageView fitHeight="40.0" fitWidth="32.0" layoutX="1003.0" layoutY="153.0" onMouseClicked="#GoBackClick" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../../images/Close.png" />
+        </image>
+    </ImageView>
+    <PasswordField fx:id="id_Password" accessibleRole="TEXT" layoutX="813.0" layoutY="360.0" prefHeight="26.0" prefWidth="164.0" promptText="Mot de Passe" style="-fx-background-radius: 10px;" visible="false">
+        <font>
+            <Font name="Comic Sans MS" size="9.0" />
+        </font>
+        <effect>
+            <DropShadow>
+                <color>
+                    <Color opacity="0.45038166642189026" />
+                </color>
+            </DropShadow>
+        </effect>
+    </PasswordField>
+    <TextField fx:id="id_Username" layoutX="813.0" layoutY="259.0" prefHeight="26.0" prefWidth="164.0" promptText="Utilisateur" style="-fx-background-radius: 10px;" visible="false">
+        <effect>
+            <DropShadow>
+                <color>
+                    <Color opacity="0.4236641228199005" />
+                </color>
+            </DropShadow>
+        </effect>
+        <font>
+            <Font name="Comic Sans MS" size="9.0" />
+        </font>
+    </TextField>
+    <Button fx:id="sincrire" layoutX="800.0" layoutY="505.0" mnemonicParsing="false" onAction="#SignUp" prefHeight="38.0" prefWidth="93.0" style="-fx-background-color: #0076A8; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="S'inscrire" textFill="WHITE" visible="false">
+        <font>
+            <Font name="Comic Sans MS" size="12.0" />
+        </font>
+    </Button>
+    <TextField fx:id="id_Email" layoutX="814.0" layoutY="312.0" prefHeight="26.0" prefWidth="164.0" promptText="Email" style="-fx-background-radius: 10px;" visible="false">
+        <effect>
+            <DropShadow>
+                <color>
+                    <Color opacity="0.4236641228199005" />
+                </color>
+            </DropShadow>
+        </effect>
+        <font>
+            <Font name="Comic Sans MS" size="9.0" />
+        </font>
+    </TextField>
+    <TextField fx:id="id_Firstname" layoutX="814.0" layoutY="252.0" prefHeight="26.0" prefWidth="164.0" promptText="Nom" style="-fx-background-radius: 10px;" visible="false">
+        <effect>
+            <DropShadow>
+                <color>
+                    <Color opacity="0.4236641228199005" />
+                </color>
+            </DropShadow>
+        </effect>
+        <font>
+            <Font name="Comic Sans MS" size="9.0" />
+        </font>
+    </TextField>
+    <TextField fx:id="id_Lastname" layoutX="814.0" layoutY="297.0" prefHeight="26.0" prefWidth="165.0" promptText="Prénom" style="-fx-background-radius: 10px;" visible="false">
+        <effect>
+            <DropShadow>
+                <color>
+                    <Color opacity="0.4236641228199005" />
+                </color>
+            </DropShadow>
+        </effect>
+        <font>
+            <Font name="Comic Sans MS" size="9.0" />
+        </font>
+    </TextField>
+    <PasswordField fx:id="id_CPassword" accessibleRole="TEXT" layoutX="813.0" layoutY="407.0" prefHeight="26.0" prefWidth="164.0" promptText="Confirm Mot de passe" style="-fx-background-radius: 10px;" visible="false">
+        <font>
+            <Font name="Comic Sans MS" size="9.0" />
+        </font>
+        <effect>
+            <DropShadow>
+                <color>
+                    <Color opacity="0.45038166642189026" />
+                </color>
+            </DropShadow>
+        </effect>
+    </PasswordField>
+    <ComboBox fx:id="id_Role" layoutX="848.0" layoutY="454.0" prefHeight="26.0" prefWidth="110.0" promptText="Role" style="-fx-background-radius: 10; -fx-background-color: white;" visible="false" visibleRowCount="2" />
+   <ImageView fitHeight="82.0" fitWidth="92.0" layoutX="809.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../images/editF.png" />
+      </image>
+   </ImageView>
+   <Label fx:id="utilisateur_laber" layoutX="673.0" layoutY="260.0" text="Utilisateur :" textFill="WHITE" visible="false">
+      <font>
+         <Font name="Comic Sans MS" size="15.0" />
+      </font></Label>
+   <Label fx:id="email_label" layoutX="683.0" layoutY="310.0" text="Email : " textFill="WHITE" visible="false">
+      <font>
+         <Font name="Comic Sans MS" size="15.0" />
+      </font></Label>
+   <Label fx:id="mdp_label" layoutX="675.0" layoutY="359.0" text="Mot de Passe :" textFill="WHITE" visible="false">
+      <font>
+         <Font name="Comic Sans MS" size="15.0" />
+      </font></Label>
+   <Label fx:id="role_label" layoutX="673.0" layoutY="457.0" text="Choisir Votre Role :" textFill="WHITE" visible="false">
+      <font>
+         <Font name="Comic Sans MS" size="15.0" />
+      </font></Label>
+    <Text fill="WHITE" layoutX="665.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inscription">
+        <font>
+            <Font name="Comic Sans MS Bold" size="24.0" />
+        </font>
+    </Text>
+   <Text fill="WHITE" layoutX="904.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ArtyVenci">
+      <font>
+         <Font name="Comic Sans MS Bold" size="24.0" />
+      </font>
+   </Text>
+   <Button fx:id="suivant" layoutX="949.0" layoutY="518.0" mnemonicParsing="false" onAction="#Suivant" prefHeight="38.0" prefWidth="93.0" style="-fx-background-color: #0076A8; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="Suivant" textFill="WHITE">
+      <font>
+         <Font name="Comic Sans MS" size="12.0" />
+      </font>
+   </Button>
+    <TextField fx:id="id_Adress" layoutX="814.0" layoutY="342.0" prefHeight="26.0" prefWidth="164.0" promptText="Adresse" style="-fx-background-radius: 10px;" visible="false">
+        <effect>
+            <DropShadow>
+                <color>
+                    <Color opacity="0.4236641228199005" />
+                </color>
+            </DropShadow>
+        </effect>
+        <font>
+            <Font name="Comic Sans MS" size="9.0" />
+        </font>
+    </TextField>
+    <ComboBox fx:id="id_Gender" layoutX="812.0" layoutY="435.0" prefHeight="27.0" prefWidth="164.0" promptText="......" style="-fx-background-radius: 10; -fx-background-color: white;" visible="false" visibleRowCount="2" />
+    <TextField fx:id="id_Phone" layoutX="812.0" layoutY="390.0" prefHeight="26.0" prefWidth="164.0" promptText="Télephone" style="-fx-background-radius: 10px;" visible="false">
+        <effect>
+            <DropShadow>
+                <color>
+                    <Color opacity="0.4236641228199005" />
+                </color>
+            </DropShadow>
+        </effect>
+        <font>
+            <Font name="Comic Sans MS" size="9.0" />
+        </font>
+    </TextField>
+   <Label fx:id="nom_label" layoutX="671.0" layoutY="254.0" text="Votre Nom :" textFill="WHITE" visible="false">
+      <font>
+         <Font name="Comic Sans MS" size="15.0" />
+      </font>
+   </Label>
+   <Label fx:id="prenom_label" layoutX="671.0" layoutY="299.0" text="Votre Prénom :" textFill="WHITE" visible="false">
+      <font>
+         <Font name="Comic Sans MS" size="15.0" />
+      </font>
+   </Label>
+   <Label fx:id="adress_label" layoutX="670.0" layoutY="343.0" text="Votre Adresse : " textFill="WHITE" visible="false">
+      <font>
+         <Font name="Comic Sans MS" size="15.0" />
+      </font>
+   </Label>
+   <Label fx:id="telelabel" layoutX="666.0" layoutY="392.0" text="Votre Télephone :" textFill="WHITE" visible="false">
+      <font>
+         <Font name="Comic Sans MS" size="15.0" />
+      </font>
+   </Label>
+   <Label fx:id="date_label" layoutX="666.0" layoutY="484.0" text="Date de Naissance :" textFill="WHITE" visible="false">
+      <font>
+         <Font name="Comic Sans MS" size="15.0" />
+      </font></Label>
+   <Label fx:id="sexe_label" layoutX="696.0" layoutY="439.0" text="Sexe :" textFill="WHITE" visible="false">
+      <font>
+         <Font name="Comic Sans MS" size="15.0" />
+      </font></Label>
+   <ImageView fx:id="id_userpicu1" fitHeight="52.0" fitWidth="14.0" layoutX="958.0" layoutY="258.0" pickOnBounds="true" preserveRatio="true" visible="false">
+      <image>
+         <Image url="@../../images/icons8-user-30.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="id_userpicu2" fitHeight="52.0" fitWidth="14.0" layoutX="958.0" layoutY="302.0" pickOnBounds="true" preserveRatio="true" visible="false">
+      <image>
+         <Image url="@../../images/icons8-user-30.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="id_location_pic" fitHeight="52.0" fitWidth="14.0" layoutX="958.0" layoutY="347.0" pickOnBounds="true" preserveRatio="true" visible="false">
+      <image>
+         <Image url="@../../images/icons8-location-30.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="id_phnepic" fitHeight="52.0" fitWidth="14.0" layoutX="958.0" layoutY="396.0" pickOnBounds="true" preserveRatio="true" visible="false">
+      <image>
+         <Image url="@../../images/icons8-phone-30.png" />
+      </image>
+   </ImageView>
+    <DatePicker fx:id="id_Dob" layoutX="816.0" layoutY="484.0" prefHeight="25.0" prefWidth="164.0" promptText="Date Naissance" visible="false" />
+   <ImageView fx:id="id_userpic2" fitHeight="52.0" fitWidth="14.0" layoutX="959.0" layoutY="265.0" pickOnBounds="true" preserveRatio="true" visible="false">
+      <image>
+         <Image url="@../../images/icons8-user-30.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="id_emailpic" fitHeight="52.0" fitWidth="14.0" layoutX="958.0" layoutY="317.0" pickOnBounds="true" preserveRatio="true" visible="false">
+      <image>
+         <Image url="@../../images/icons8-email-30.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="mdppic" fitHeight="52.0" fitWidth="14.0" layoutX="957.0" layoutY="367.0" pickOnBounds="true" preserveRatio="true" visible="false">
+      <image>
+         <Image url="@../../images/icons8-password-30.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="id_mdppic" fitHeight="52.0" fitWidth="14.0" layoutX="957.0" layoutY="413.0" pickOnBounds="true" preserveRatio="true" visible="false">
+      <image>
+         <Image url="@../../images/icons8-password-30.png" />
+      </image>
+   </ImageView>
+   <Button fx:id="suivant2" layoutX="949.0" layoutY="518.0" mnemonicParsing="false" onAction="#Suivanttoprofile" prefHeight="38.0" prefWidth="93.0" style="-fx-background-color: #0076A8; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="Suivant" textFill="WHITE" visible="false">
+      <font>
+         <Font name="Comic Sans MS" size="12.0" />
+      </font>
+   </Button>
+   <ImageView fx:id="id_Profile_Pic" fitHeight="168.0" fitWidth="212.0" layoutX="757.0" layoutY="253.0" onMouseClicked="#Addimage" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../images/userprofile.png" />
+      </image>
+   </ImageView>
+   <Label fx:id="profilemessage" layoutX="767.0" layoutY="428.0" text="Ajouter un photo de Profile" textFill="WHITE">
+      <font>
+         <Font name="Comic Sans MS" size="15.0" />
+      </font>
+   </Label>
+   <ImageView fx:id="goback1" fitHeight="71.0" fitWidth="32.0" layoutX="680.0" layoutY="521.0" onMouseClicked="#goback1" pickOnBounds="true" preserveRatio="true" visible="false">
+      <image>
+         <Image url="@../../images/back.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="goback2" fitHeight="71.0" fitWidth="32.0" layoutX="680.0" layoutY="521.0" onMouseClicked="#goback2" pickOnBounds="true" preserveRatio="true" visible="false">
+      <image>
+         <Image url="@../../images/back.png" />
+      </image>
+   </ImageView>
+   <SubScene fx:id="subscene" fill="WHITE" height="129.0" layoutX="540.0" layoutY="264.0" width="218.0">
+     <root>
+       <Region />
+     </root>
+   </SubScene>
+   <Label fx:id="anulller_message" layoutX="551.0" layoutY="282.0" prefHeight="28.0" prefWidth="200.0" text="Annuler l'inscription">
+      <font>
+         <Font name="Comic Sans MS" size="20.0" />
+      </font>
+   </Label>
+   <Button fx:id="oui" layoutX="557.0" layoutY="334.0" mnemonicParsing="false" onAction="#oui" prefHeight="38.0" prefWidth="60.0" style="-fx-background-color: #0076A8; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="Oui" textFill="WHITE">
+      <font>
+         <Font name="Comic Sans MS" size="12.0" />
+      </font>
+   </Button>
+   <Button fx:id="Non" layoutX="680.0" layoutY="334.0" mnemonicParsing="false" onAction="#Non" prefHeight="38.0" prefWidth="60.0" style="-fx-background-color: #0076A8; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="Non" textFill="WHITE">
+      <font>
+         <Font name="Comic Sans MS" size="12.0" />
+      </font>
+   </Button>
+</AnchorPane>

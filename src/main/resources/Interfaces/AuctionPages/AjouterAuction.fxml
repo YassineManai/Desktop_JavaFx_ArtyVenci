@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Kenza_Controllers.AjouterAuctionController">
+         <ImageView fitHeight="911.0" fitWidth="1291.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/deco.png" />
+         </image>
+      </ImageView>
+   <ToolBar layoutY="1.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="96.0" prefWidth="1280.0" style="-fx-background-color: #FFFFFF;">
+      <items>
+         <ImageView fitHeight="86.0" fitWidth="112.0" pickOnBounds="true">
+            <image>
+               <Image url="@../../images/logo.PNG" />
+            </image>
+         </ImageView>
+         <Button mnemonicParsing="false" onAction="#Go_To_Home" prefHeight="44.0" prefWidth="117.0" style="-fx-background-color: #FFFFFF;" text="Accueil">
+            <font>
+               <Font size="20.0" />
+            </font>
+         </Button>
+         <Button layoutX="120.0" layoutY="12.0" mnemonicParsing="false" onAction="#Go_To_Product" prefHeight="44.0" prefWidth="145.0" style="-fx-background-color: #FFFFFF;" text="Magasin">
+            <font>
+               <Font size="20.0" />
+            </font>
+         </Button>
+         <Button layoutX="213.0" layoutY="27.0" mnemonicParsing="false" onAction="#Go_To_Auction" prefHeight="44.0" prefWidth="101.0" style="-fx-background-color: #FFFFFF;" text="Enchére" textFill="#0076a8">
+            <font>
+               <Font name="System Bold Italic" size="20.0" />
+            </font>
+         </Button>
+         <Button layoutX="213.0" layoutY="12.0" mnemonicParsing="false" onAction="#Go_To_Forum" prefHeight="44.0" prefWidth="106.0" style="-fx-background-color: #FFFFFF;" text="Forum">
+            <font>
+               <Font size="20.0" />
+            </font>
+         </Button>
+         <Button layoutX="318.0" layoutY="12.0" mnemonicParsing="false" onAction="#Go_To_Event" prefHeight="44.0" prefWidth="143.0" style="-fx-background-color: #FFFFFF;" text="Evènements">
+            <font>
+               <Font size="20.0" />
+            </font>
+         </Button>
+         <Button layoutX="405.0" layoutY="12.0" mnemonicParsing="false" onAction="#Go_To_Message" prefHeight="44.0" prefWidth="155.0" style="-fx-background-color: #FFFFFF;" text="Messagerie">
+            <font>
+               <Font size="20.0" />
+            </font>
+         </Button>
+         <Button layoutX="1121.0" layoutY="31.0" mnemonicParsing="false" style="-fx-background-color: #FFFFFF;">
+            <font>
+               <Font size="20.0" />
+            </font>
+         </Button>
+         <ImageView fx:id="bell" fitHeight="39.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" visible="false">
+            <image>
+               <Image url="@../../images/bell.png" />
+            </image>
+         </ImageView>
+         <ImageView fx:id="usericon" fitHeight="38.0" fitWidth="58.0" onMouseClicked="#ProfileVisit" pickOnBounds="true" preserveRatio="true" visible="false">
+            <image>
+               <Image url="@../../images/pers.PNG" />
+            </image>
+         </ImageView>
+         <Label fx:id="nav_name" prefHeight="38.0" prefWidth="97.0" text="Bienvenue!">
+            <font>
+               <Font name="Bell MT Italic" size="22.0" />
+            </font>
+         </Label>
+         <Button fx:id="inscrire" mnemonicParsing="false" onAction="#sinscrire" prefHeight="40.0" prefWidth="82.0" style="-fx-background-color: #0076A8; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="S'inscrire" textFill="WHITE" visible="false">
+            <font>
+               <Font name="Comic Sans MS" size="12.0" />
+            </font>
+         </Button>
+         <ImageView fx:id="logouticon" fitHeight="36.0" fitWidth="42.0" onMouseClicked="#Logout" pickOnBounds="true" preserveRatio="true" visible="false">
+            <image>
+               <Image url="@../../images/arrow.png" />
+            </image>
+         </ImageView>
+      </items>
+   </ToolBar>
+      <AnchorPane layoutX="473.0" layoutY="149.0" prefHeight="467.0" prefWidth="307.0" style="-fx-background-color: #ffffff;" AnchorPane.topAnchor="149.0">
+         <children>
+            <Button fx:id="tf_addAuction" layoutX="116.0" layoutY="405.0" mnemonicParsing="false" onAction="#AjouterAuction" text="Enregistrer" textFill="#0388a6">
+            <font>
+               <Font name="Times New Roman" size="12.0" />
+            </font></Button>
+            <ChoiceBox fx:id="tf_produit" layoutX="76.0" layoutY="180.0" prefWidth="150.0" />
+            <Spinner fx:id="tf_prix_initial" layoutX="78.0" layoutY="260.0" prefHeight="26.0" prefWidth="150.0" />
+            <DatePicker fx:id="tf_date" layoutX="30.0" layoutY="340.0" prefHeight="26.0" prefWidth="85.0" />
+            <TextField fx:id="tf_nomAuction" layoutX="77.0" layoutY="93.0" promptText="Nom" />
+            <DatePicker fx:id="tf_dateC" layoutX="187.0" layoutY="340.0" prefHeight="26.0" prefWidth="91.0" />
+            <Label layoutX="83.0" layoutY="74.0" text="Entrer le nom" textFill="#a6a1a1">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="80.0" layoutY="161.0" text="Choisir le produit" textFill="#a6a1a1">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="79.0" layoutY="242.0" text="Fixer le prix de depart" textFill="#a6a1a1">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="33.0" layoutY="321.0" text="Date lalcement" textFill="#a6a1a1">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="193.0" layoutY="322.0" text="Date cloture" textFill="#a6a1a1">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+         <ImageView fitHeight="18.0" fitWidth="11.0" layoutX="287.0" layoutY="7.0" onMouseClicked="#retourner" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../images/coser_icon.png" />
+            </image>
+         </ImageView>
+         </children></AnchorPane>
+
+</AnchorPane>

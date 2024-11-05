@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="vbox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="83.0" prefWidth="784.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Asma_Controllers.MessageController">
+   <HBox prefHeight="82.0" prefWidth="514.0">
+      <children>
+         <ImageView fx:id="img" fitHeight="83.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true" />
+         <Label fx:id="sender" prefHeight="83.0" prefWidth="111.0">
+            <font>
+               <Font name="System Bold Italic" size="18.0" />
+            </font>
+         </Label>
+         <VBox alignment="TOP_CENTER" prefHeight="83.0" prefWidth="667.0">
+            <children>
+
+               <Label fx:id="messagee" alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="61.0" prefWidth="598.0" text="Content">
+                  <!--style="-fx-background-color: #B4DBDC;" text="Label">-->
+                  <font>
+                     <Font name="Century Schoolbook Italic" size="20.0" />
+                  </font>
+               </Label>
+               <Label fx:id="heure" alignment="BOTTOM_RIGHT" prefHeight="22.0" prefWidth="210.0" text="heure" textFill="#000000bb">
+                  <font>
+                     <Font name="Century Schoolbook Italic" size="15.0" />
+                  </font>
+                  <padding>
+                     <Insets left="50.0" />
+                  </padding>
+                  <opaqueInsets>
+                     <Insets />
+                  </opaqueInsets>
+               </Label>
+            </children>
+         </VBox>
+      </children>
+   </HBox>
+
+</VBox>

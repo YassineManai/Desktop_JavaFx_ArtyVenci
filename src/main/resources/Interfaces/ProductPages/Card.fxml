@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox fx:id="box" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="302.0" prefWidth="293.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Ali_Controllers.CardsController">
+   <children>
+      <VBox prefHeight="302.0" prefWidth="298.0">
+         <children>
+            <ImageView fx:id="ProductImage" fitHeight="163.0" fitWidth="249.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/bcg1.png" />
+               </image>
+            </ImageView>
+            <HBox prefHeight="21.0" prefWidth="250.0">
+               <children>
+                  <Label prefHeight="18.0" prefWidth="86.0" text="Product Ref :">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="IdCard" prefHeight="18.0" prefWidth="25.0" text="Id" />
+               </children>
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin>
+            </HBox>
+            <Label fx:id="Title" text="Title">
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="Desc" text="Description">
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="Fsale" text="For sale">
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="Price" text="Price">
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="Date" text="Creation Date">
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin>
+            </Label>
+            <Button fx:id="OrderButton" mnemonicParsing="false" onAction="#AddOrderBtn" text="Order">
+               <VBox.margin>
+                  <Insets left="90.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</HBox>

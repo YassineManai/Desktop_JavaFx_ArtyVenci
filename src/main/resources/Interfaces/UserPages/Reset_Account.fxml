@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="360.0" minWidth="360.0" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #d5f5d5;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Yassine_Controllers.ResetAccountController">
+    <ImageView fitHeight="729.0" fitWidth="1495.0" layoutX="-210.0" layoutY="-6.0">
+        <Image url="@../../images/Background.png" />
+    </ImageView>
+    <ImageView fitHeight="420.0" fitWidth="494.0" layoutX="251.0" layoutY="143.0" opacity="0.9" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../../images/Frame%208.png" />
+        </image>
+    </ImageView>
+    <ImageView fitHeight="420.0" fitWidth="398.0" layoutX="649.0" layoutY="143.0" opacity="0.8" pickOnBounds="true">
+        <image>
+            <Image url="@../../images/Capture%20d'écran%202024-01-27%20235552%202%20(1).png" />
+        </image>
+    </ImageView>
+    <ImageView fitHeight="40.0" fitWidth="32.0" layoutX="1003.0" layoutY="153.0" onMouseClicked="#GoBackClick" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../../images/Close.png" />
+        </image>
+    </ImageView>
+    <TextField fx:id="id_Username" layoutX="695.0" layoutY="349.0" prefHeight="40.0" prefWidth="307.0" style="-fx-background-radius: 10px;" visible="false">
+        <effect>
+            <DropShadow>
+                <color>
+                    <Color opacity="0.4236641228199005" />
+                </color>
+            </DropShadow>
+        </effect>
+        <font>
+            <Font name="Comic Sans MS" size="9.0" />
+        </font>
+    </TextField>
+    <Button fx:id="envoyer_email1" layoutX="795.0" layoutY="479.0" mnemonicParsing="false" onAction="#Envoyer_Email" prefHeight="40.0" prefWidth="108.0" style="-fx-background-color: #0076A8; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="Envoyer Email" textFill="WHITE" visible="false">
+        <font>
+            <Font name="Comic Sans MS" size="12.0" />
+        </font>
+    </Button>
+    <Label fx:id="label2" layoutX="714.0" layoutY="253.0" prefHeight="22.0" prefWidth="280.0" text="Entrez votre nom d’utilisateur et nous vous " textFill="WHITE" visible="false">
+        <font>
+            <Font name="Bodoni MT" size="15.0" />
+        </font>
+    </Label>
+    <Label fx:id="label1" layoutX="677.0" layoutY="219.0" text="Réinitialiser votre mot de passe" textFill="WHITE" visible="false">
+        <font>
+            <Font name="Bodoni MT Bold" size="27.0" />
+        </font>
+    </Label>
+    <Label fx:id="label20" layoutX="697.0" layoutY="318.0" text="Utilisateur" textFill="WHITE" visible="false">
+        <font>
+            <Font name="Bodoni MT Bold Italic" size="18.0" />
+        </font>
+    </Label>
+    <Label fx:id="O_Utilisateur" layoutX="695.0" layoutY="423.0" onMouseClicked="#oublienUtilisateur" text="Oublier Utilisateur ?" textFill="WHITE" underline="true" visible="false">
+        <font>
+            <Font name="Bodoni MT" size="15.0" />
+        </font>
+    </Label>
+   <Label fx:id="label3" layoutX="681.0" layoutY="275.0" prefHeight="22.0" prefWidth="346.0" text="enverrons un lien pour réinitialiser votre mot de passe." textFill="WHITE" visible="false">
+      <font>
+         <Font name="Bodoni MT" size="15.0" />
+      </font>
+   </Label>
+   <ImageView fx:id="Retour" fitHeight="40.0" fitWidth="32.0" layoutX="679.0" layoutY="153.0" onMouseClicked="#Retour" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../images/back.png" />
+      </image>
+   </ImageView>
+   <Label fx:id="label5" layoutX="716.0" layoutY="158.0" onMouseClicked="#Retour" prefHeight="22.0" prefWidth="47.0" text="Retour" textFill="WHITE">
+      <font>
+         <Font name="Bodoni MT" size="15.0" />
+      </font>
+   </Label>
+   <TextField fx:id="id_email" layoutX="695.0" layoutY="350.0" prefHeight="40.0" prefWidth="307.0" style="-fx-background-radius: 10px;" visible="false">
+      <effect>
+         <DropShadow>
+            <color>
+               <Color opacity="0.4236641228199005" />
+            </color>
+         </DropShadow>
+      </effect>
+      <font>
+         <Font name="Comic Sans MS" size="9.0" />
+      </font>
+   </TextField>
+   <Label fx:id="labelv3" layoutX="694.0" layoutY="254.0" prefHeight="22.0" prefWidth="324.0" text="Entrez votre email pour nous aider à vous trouver." textFill="WHITE" visible="false">
+      <font>
+         <Font name="Bodoni MT" size="15.0" />
+      </font>
+   </Label>
+   <Label fx:id="labelv2" layoutX="717.0" layoutY="219.0" text="Récupérer votre compte" textFill="WHITE" visible="false">
+      <font>
+         <Font name="Bodoni MT Bold" size="27.0" />
+      </font>
+   </Label>
+   <Label fx:id="labelv5" layoutX="697.0" layoutY="319.0" text="Email" textFill="WHITE" visible="false">
+      <font>
+         <Font name="Bodoni MT Bold Italic" size="18.0" />
+      </font>
+   </Label>
+   <Label fx:id="O_motpasse" layoutX="695.0" layoutY="424.0" onMouseClicked="#forgetpassword" text="Oublier mot de passe?" textFill="WHITE" underline="true" visible="false">
+      <font>
+         <Font name="Bodoni MT" size="15.0" />
+      </font>
+   </Label>
+   <Label fx:id="labelv4" layoutX="671.0" layoutY="276.0" prefHeight="22.0" prefWidth="365.0" text="Nous vous enverrons un lien pour récupérer votre compte." textFill="WHITE" visible="false">
+      <font>
+         <Font name="Bodoni MT" size="15.0" />
+      </font>
+   </Label>
+   <Button fx:id="envoyer_email2" layoutX="794.0" layoutY="481.0" mnemonicParsing="false" onAction="#Envoyer_Email2" prefHeight="40.0" prefWidth="108.0" style="-fx-background-color: #0076A8; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="Envoyer Email" textFill="WHITE" visible="false">
+      <font>
+         <Font name="Comic Sans MS" size="12.0" />
+      </font>
+   </Button>
+   <ImageView fx:id="Retour1" fitHeight="40.0" fitWidth="32.0" layoutX="679.0" layoutY="154.0" onMouseClicked="#Retour1" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../images/back.png" />
+      </image>
+   </ImageView>
+   <Label fx:id="labelv1" layoutX="716.0" layoutY="159.0" onMouseClicked="#Retour" prefHeight="22.0" prefWidth="47.0" text="Retour" textFill="WHITE">
+      <font>
+         <Font name="Bodoni MT" size="15.0" />
+      </font>
+   </Label>
+   <Label fx:id="AutreMethode" layoutX="933.0" layoutY="530.0" onMouseClicked="#AutreMethode" text="Autre methode?" textFill="WHITE" underline="true">
+      <font>
+         <Font name="Bodoni MT" size="15.0" />
+      </font>
+   </Label>
+   <Button fx:id="EnvoyerSMS" layoutX="789.0" layoutY="423.0" mnemonicParsing="false" onAction="#EnvoyerSMS" prefHeight="40.0" prefWidth="108.0" style="-fx-background-color: #0076A8; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="Envoyer SMS" textFill="WHITE">
+      <font>
+         <Font name="Comic Sans MS" size="12.0" />
+      </font>
+   </Button>
+   <TextField fx:id="id_phone" layoutX="782.0" layoutY="354.0" prefHeight="40.0" prefWidth="222.0" style="-fx-background-radius: 10px;">
+      <effect>
+         <DropShadow>
+            <color>
+               <Color opacity="0.4236641228199005" />
+            </color>
+         </DropShadow>
+      </effect>
+      <font>
+         <Font name="Comic Sans MS" size="9.0" />
+      </font>
+   </TextField>
+   <Label fx:id="labelS2" layoutX="703.0" layoutY="254.0" prefHeight="22.0" prefWidth="307.0" text="Entrez votre numéro teléphone pour nous aider" textFill="WHITE">
+      <font>
+         <Font name="Bodoni MT" size="15.0" />
+      </font>
+   </Label>
+   <Label fx:id="labelS1" layoutX="717.0" layoutY="219.0" text="Récupérer votre compte" textFill="WHITE">
+      <font>
+         <Font name="Bodoni MT Bold" size="27.0" />
+      </font>
+   </Label>
+   <Label fx:id="labelS4" layoutX="697.0" layoutY="319.0" text="Numéro téléphone" textFill="WHITE">
+      <font>
+         <Font name="Bodoni MT Bold Italic" size="18.0" />
+      </font>
+   </Label>
+   <Label fx:id="labelS3" layoutX="794.0" layoutY="276.0" prefHeight="22.0" prefWidth="108.0" text=" à vous trouver" textFill="WHITE">
+      <font>
+         <Font name="Bodoni MT" size="15.0" />
+      </font>
+   </Label>
+   <ImageView fx:id="iconS1" fitHeight="40.0" fitWidth="41.0" layoutX="697.0" layoutY="354.0" onMouseClicked="#Retour1" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../images/tounis.png" />
+      </image>
+   </ImageView>
+   <Label fx:id="labelS5" layoutX="741.0" layoutY="363.0" prefHeight="22.0" prefWidth="40.0" text="+216" textFill="WHITE">
+      <font>
+         <Font name="Bodoni MT" size="15.0" />
+      </font>
+   </Label>
+</AnchorPane>

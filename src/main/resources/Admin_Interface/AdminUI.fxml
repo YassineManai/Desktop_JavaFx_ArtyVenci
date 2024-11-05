@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="360.0" minWidth="360.0" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #d5f5d5;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Admin.User.AdminController">
+   <ImageView fitHeight="720.0" fitWidth="1286.0" layoutX="-10.0" layoutY="2.0" pickOnBounds="true">
+      <image>
+         <Image url="@../images/bk2.png" />
+      </image>
+   </ImageView>
+   <ImageView fitHeight="175.0" fitWidth="205.0" layoutX="27.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../images/422753690_204703712734911_8704086809119957789_n.png" />
+      </image>
+   </ImageView>
+   <ImageView fitHeight="54.0" fitWidth="44.0" layoutX="1080.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../images/icons8-admin-100.png" />
+      </image>
+   </ImageView>
+   <ImageView fitHeight="536.0" fitWidth="1172.0" layoutX="125.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../images/bk3.png" />
+      </image>
+   </ImageView>
+   <Label layoutX="1128.0" layoutY="38.0" text="Bienvenue Admin">
+      <font>
+         <Font name="Comic Sans MS" size="15.0" />
+      </font>
+   </Label>
+   <ImageView fx:id="logout" fitHeight="38.0" fitWidth="44.0" layoutX="1175.0" layoutY="87.0" onMouseClicked="#logout" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../images/arrow.png" />
+      </image>
+   </ImageView>
+   <Label layoutX="1221.0" layoutY="95.0" text="Sortie">
+      <font>
+         <Font name="Comic Sans MS" size="15.0" />
+      </font>
+   </Label>
+   <ImageView fitHeight="97.0" fitWidth="135.0" layoutX="67.0" layoutY="619.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../images/FLOWER2.png" />
+      </image>
+   </ImageView>
+   <ImageView fitHeight="86.0" fitWidth="163.0" layoutX="144.0" layoutY="212.0" onMouseClicked="#Go_To_User" pickOnBounds="true">
+      <image>
+         <Image url="@../images/FRAME10.png" />
+      </image>
+   </ImageView>
+   <ImageView fitHeight="86.0" fitWidth="163.0" layoutX="318.0" layoutY="213.0" onMouseClicked="#Go_To_Product" pickOnBounds="true">
+      <image>
+         <Image url="@../images/FRAME10.png" />
+      </image>
+   </ImageView>
+   <ImageView fitHeight="86.0" fitWidth="163.0" layoutX="490.0" layoutY="212.0" onMouseClicked="#Go_To_Auction" pickOnBounds="true">
+      <image>
+         <Image url="@../images/FRAME10.png" />
+      </image>
+   </ImageView>
+   <ImageView fitHeight="86.0" fitWidth="163.0" layoutX="666.0" layoutY="211.0" onMouseClicked="#Go_To_Forum" pickOnBounds="true">
+      <image>
+         <Image url="@../images/FRAME10.png" />
+      </image>
+   </ImageView>
+   <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="254.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" />
+   <ImageView fitHeight="75.0" fitWidth="90.0" layoutX="144.0" layoutY="216.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../images/UserA.png" />
+      </image>
+   </ImageView>
+   <ImageView fitHeight="75.0" fitWidth="90.0" layoutX="315.0" layoutY="219.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../images/ProduitArt.png" />
+      </image>
+   </ImageView>
+   <ImageView fitHeight="75.0" fitWidth="90.0" layoutX="490.0" layoutY="218.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../images/Auction.png" />
+      </image>
+   </ImageView>
+   <ImageView fitHeight="75.0" fitWidth="90.0" layoutX="665.0" layoutY="216.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../images/Forum.png" />
+      </image>
+   </ImageView>
+   <Label layoutX="216.0" layoutY="232.0" text="Utilisateurs" textFill="#006590">
+      <font>
+         <Font name="Comic Sans MS" size="15.0" />
+      </font>
+   </Label>
+   <Label layoutX="403.0" layoutY="233.0" text="O.D'arts" textFill="#006590">
+      <font>
+         <Font name="Comic Sans MS" size="15.0" />
+      </font>
+   </Label>
+   <Label layoutX="565.0" layoutY="232.0" text="Enchéres" textFill="#006590">
+      <font>
+         <Font name="Comic Sans MS" size="15.0" />
+      </font>
+   </Label>
+   <Label layoutX="746.0" layoutY="229.0" text="Forums" textFill="#006590">
+      <font>
+         <Font name="Comic Sans MS" size="15.0" />
+      </font>
+   </Label>
+   <ImageView fitHeight="97.0" fitWidth="135.0" layoutX="1108.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../images/FLOWER2.png" />
+      </image>
+   </ImageView>
+   <TableView fx:id="tv_users" layoutX="209.0" layoutY="373.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="282.0" prefWidth="728.0">
+     <columns>
+       <TableColumn fx:id="id_username" prefWidth="95.0" text="NomUtilisateur" />
+         <TableColumn fx:id="id_email" prefWidth="85.0" text="Email" />
+         <TableColumn fx:id="id_role" prefWidth="45.0" text="Role" />
+         <TableColumn fx:id="id_firstname" prefWidth="76.0" text="Nom" />
+         <TableColumn fx:id="id_lastname" prefWidth="81.0" text="Prénom" />
+         <TableColumn fx:id="id_adress" prefWidth="86.0" text="Adresse" />
+         <TableColumn fx:id="id_phone" prefWidth="83.0" text="Télephone" />
+         <TableColumn fx:id="id_gender" prefWidth="59.0" text="Genre" />
+         <TableColumn fx:id="id_dob" prefWidth="112.0" text="Date de Naissance" />
+         <TableColumn fx:id="id_image" prefWidth="75.0" text="Image" visible="false" />
+     </columns>
+   </TableView>
+   <ComboBox fx:id="id_Choice" layoutX="865.0" layoutY="328.0" prefHeight="25.0" prefWidth="71.0" promptText="Filter" />
+   <Button fx:id="ViewProfile" layoutX="1002.0" layoutY="464.0" mnemonicParsing="false" onAction="#ViewProfile" prefHeight="38.0" prefWidth="107.0" style="-fx-background-color: #ffffff; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="Voir Profile" textFill="#006590">
+      <font>
+         <Font name="Comic Sans MS" size="15.0" />
+      </font>
+   </Button>
+   <ImageView fx:id="logout" fitHeight="38.0" fitWidth="44.0" layoutX="1175.0" layoutY="87.0" onMouseClicked="#logout" pickOnBounds="true" preserveRatio="true" visible="false">
+      <image>
+         <Image url="@../images/arrow.png" />
+      </image>
+   </ImageView>
+   <Label layoutX="1221.0" layoutY="95.0" text="Sortie" visible="false">
+      <font>
+         <Font name="Comic Sans MS" size="15.0" />
+      </font>
+   </Label>
+   <ImageView fitHeight="97.0" fitWidth="135.0" layoutX="67.0" layoutY="619.0" pickOnBounds="true" preserveRatio="true" visible="false">
+      <image>
+         <Image url="@../images/FLOWER2.png" />
+      </image>
+   </ImageView>
+   <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="254.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" visible="false" />
+   <Label fx:id="Num_Users" layoutX="237.0" layoutY="255.0" prefHeight="25.0" prefWidth="38.0" text="10">
+      <font>
+         <Font name="Comic Sans MS Bold" size="22.0" />
+      </font>
+   </Label>
+   <Label fx:id="Num_Arts" layoutX="411.0" layoutY="255.0" prefHeight="25.0" prefWidth="38.0" text="10">
+      <font>
+         <Font name="Comic Sans MS Bold" size="22.0" />
+      </font>
+   </Label>
+   <Label fx:id="Num_Auction" layoutX="583.0" layoutY="255.0" prefHeight="25.0" prefWidth="38.0" text="10">
+      <font>
+         <Font name="Comic Sans MS Bold" size="22.0" />
+      </font>
+   </Label>
+   <Label fx:id="Num_Forum" layoutX="758.0" layoutY="255.0" prefHeight="25.0" prefWidth="38.0" text="10">
+      <font>
+         <Font name="Comic Sans MS Bold" size="22.0" />
+      </font>
+   </Label>
+   <ImageView fitHeight="86.0" fitWidth="163.0" layoutX="840.0" layoutY="210.0" onMouseClicked="#Go_To_Event" pickOnBounds="true">
+      <image>
+         <Image url="@../images/FRAME10.png" />
+      </image>
+   </ImageView>
+   <ImageView fitHeight="75.0" fitWidth="90.0" layoutX="838.0" layoutY="215.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../images/Event.png" />
+      </image>
+   </ImageView>
+   <Label layoutX="908.0" layoutY="229.0" text="Evenements" textFill="#006590">
+      <font>
+         <Font name="Comic Sans MS" size="15.0" />
+      </font>
+   </Label>
+   <Label fx:id="Num_Events" layoutX="933.0" layoutY="254.0" prefHeight="25.0" prefWidth="38.0" text="10">
+      <font>
+         <Font name="Comic Sans MS Bold" size="22.0" />
+      </font>
+   </Label>
+   <Label layoutX="216.0" layoutY="317.0" text="Table d'utilisateurs : " textFill="WHITE">
+      <font>
+         <Font name="Comic Sans MS" size="31.0" />
+      </font>
+   </Label>
+   <TextField fx:id="recherchenom" layoutX="613.0" layoutY="325.0" prefHeight="32.0" prefWidth="175.0" promptText="Entrer nom utilisateur" style="-fx-background-radius: 10px;">
+      <effect>
+         <DropShadow>
+            <color>
+               <Color opacity="0.4236641228199005" />
+            </color>
+         </DropShadow>
+      </effect>
+      <font>
+         <Font name="Comic Sans MS" size="9.0" />
+      </font>
+   </TextField>
+   <ImageView fx:id="recherche" fitHeight="32.0" fitWidth="32.0" layoutX="790.0" layoutY="325.0" onMouseClicked="#rechercheuser" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../images/search.png" />
+      </image>
+   </ImageView>
+   <ImageView fitHeight="97.0" fitWidth="135.0" layoutX="1108.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true" visible="false">
+      <image>
+         <Image url="@../images/FLOWER2.png" />
+      </image>
+   </ImageView>
+   <Rectangle fx:id="back" arcHeight="5.0" arcWidth="5.0" height="734.0" layoutX="-6.0" layoutY="-7.0" opacity="0.3" stroke="BLACK" strokeType="INSIDE" visible="false" width="1293.0" />
+   <ImageView fx:id="ViewUser" fitHeight="457.0" fitWidth="773.0" layoutX="243.0" layoutY="125.0" pickOnBounds="true" visible="false">
+      <image>
+         <Image url="@../images/FRAME10.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="profile_pic" fitHeight="156.0" fitWidth="166.0" layoutX="282.0" layoutY="174.0" onMouseClicked="#AddImage" pickOnBounds="true" preserveRatio="true" visible="false">
+      <image>
+         <Image url="@../images/Avatar.png" />
+      </image>
+   </ImageView>
+   <Separator fx:id="separator" layoutX="462.0" layoutY="124.0" orientation="VERTICAL" prefHeight="457.0" prefWidth="9.0" visible="false" />
+   <Label fx:id="FirstLastname" layoutX="264.0" layoutY="341.0" prefHeight="40.0" prefWidth="262.0" text="Yassine Manai" visible="false">
+      <font>
+         <Font name="System Bold" size="28.0" />
+      </font>
+   </Label>
+   <Button fx:id="deleteButton" layoutX="263.0" layoutY="531.0" mnemonicParsing="false" onAction="#Delete" prefHeight="38.0" prefWidth="187.0" style="-fx-background-color: #ffffff; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="   Supprimer Utilisateur" textFill="#006590" visible="false">
+      <font>
+         <Font name="Comic Sans MS" size="15.0" />
+      </font>
+   </Button>
+   <ImageView fx:id="icon6" fitHeight="44.0" fitWidth="23.0" layoutX="259.0" layoutY="538.0" pickOnBounds="true" preserveRatio="true" visible="false">
+      <image>
+         <Image url="@../images/deeet.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="artyvenci" fitHeight="443.0" fitWidth="447.0" layoutX="508.0" layoutY="192.0" opacity="0.25" pickOnBounds="true" preserveRatio="true" visible="false">
+      <image>
+         <Image url="@../images/422753690_204703712734911_8704086809119957789_n.png" />
+      </image>
+   </ImageView>
+   <Label fx:id="username1" layoutX="323.0" layoutY="381.0" prefHeight="25.0" prefWidth="135.0" text="Hei-kun" underline="true" visible="false">
+      <font>
+         <Font name="System Italic" size="16.0" />
+      </font>
+   </Label>
+   <Label fx:id="label2" layoutX="543.0" layoutY="244.0" text="Email :" visible="false">
+      <font>
+         <Font name="Comic Sans MS Bold" size="21.0" />
+      </font>
+   </Label>
+   <Label fx:id="label3" layoutX="538.0" layoutY="302.0" text="Télephone :" visible="false">
+      <font>
+         <Font name="Comic Sans MS Bold" size="21.0" />
+      </font>
+   </Label>
+   <Label fx:id="label5" layoutX="543.0" layoutY="402.0" text="Date de Naissance :" visible="false">
+      <font>
+         <Font name="Comic Sans MS Bold" size="21.0" />
+      </font>
+   </Label>
+   <Label fx:id="label6" layoutX="541.0" layoutY="447.0" text="Sexe :" visible="false">
+      <font>
+         <Font name="Comic Sans MS Bold" size="21.0" />
+      </font>
+   </Label>
+   <Label fx:id="label4" layoutX="544.0" layoutY="353.0" text="Adress" visible="false">
+      <font>
+         <Font name="Comic Sans MS Bold" size="21.0" />
+      </font>
+   </Label>
+   <ImageView fx:id="icon1" fitHeight="32.0" fitWidth="38.0" layoutX="505.0" layoutY="245.0" pickOnBounds="true" preserveRatio="true" visible="false">
+      <image>
+         <Image url="@../images/icons8-email-50.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="icon2" fitHeight="32.0" fitWidth="38.0" layoutX="505.0" layoutY="301.0" pickOnBounds="true" preserveRatio="true" visible="false">
+      <image>
+         <Image url="@../images/icons8-telephone-50.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="icon3" fitHeight="32.0" fitWidth="38.0" layoutX="505.0" layoutY="352.0" pickOnBounds="true" preserveRatio="true" visible="false">
+      <image>
+         <Image url="@../images/icons8-country-50.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="icon4" fitHeight="32.0" fitWidth="38.0" layoutX="506.0" layoutY="403.0" pickOnBounds="true" preserveRatio="true" visible="false">
+      <image>
+         <Image url="@../images/icons8-date-50.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="icon5" fitHeight="32.0" fitWidth="38.0" layoutX="506.0" layoutY="447.0" pickOnBounds="true" preserveRatio="true" visible="false">
+      <image>
+         <Image url="@../images/icons8-name-50.png" />
+      </image>
+   </ImageView>
+   <Label fx:id="Role" layoutX="632.0" layoutY="158.0" prefHeight="59.0" prefWidth="150.0" text="Member " textFill="#006590" visible="false">
+      <font>
+         <Font name="High Tower Text Italic" size="41.0" />
+      </font>
+   </Label>
+   <Label fx:id="label1" layoutX="776.0" layoutY="172.0" prefHeight="40.0" prefWidth="48.0" text="N°" textFill="#006590" visible="false">
+      <font>
+         <Font name="High Tower Text Italic" size="28.0" />
+      </font>
+   </Label>
+   <Button fx:id="Editbutton" layoutX="891.0" layoutY="528.0" mnemonicParsing="false" onAction="#Edit" prefHeight="38.0" prefWidth="107.0" style="-fx-background-color: #006590; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="Modifier" textFill="#f8f8f8" visible="false">
+      <font>
+         <Font name="Comic Sans MS" size="15.0" />
+      </font>
+   </Button>
+   <Label fx:id="iduser" layoutX="839.0" layoutY="172.0" prefHeight="40.0" prefWidth="48.0" text="id" textFill="#006590" visible="false">
+      <font>
+         <Font name="System Bold" size="28.0" />
+      </font>
+   </Label>
+   <Label fx:id="email1" layoutX="701.0" layoutY="229.0" prefHeight="59.0" prefWidth="308.0" text="email" textFill="#006590" visible="false">
+      <font>
+         <Font name="High Tower Text Italic" size="31.0" />
+      </font>
+   </Label>
+   <Label fx:id="telephone" layoutX="700.0" layoutY="287.0" prefHeight="59.0" prefWidth="228.0" text="tel" textFill="#006590" visible="false">
+      <font>
+         <Font name="High Tower Text Italic" size="31.0" />
+      </font>
+   </Label>
+   <Label fx:id="Adress" layoutX="700.0" layoutY="338.0" prefHeight="59.0" prefWidth="308.0" text="Adress" textFill="#006590" visible="false">
+      <font>
+         <Font name="High Tower Text Italic" size="31.0" />
+      </font>
+   </Label>
+   <Label fx:id="date" layoutX="771.0" layoutY="387.0" prefHeight="59.0" prefWidth="243.0" text="date" textFill="#006590" visible="false">
+      <font>
+         <Font name="High Tower Text Italic" size="31.0" />
+      </font>
+   </Label>
+   <Label fx:id="sexe" layoutX="629.0" layoutY="434.0" prefHeight="59.0" prefWidth="107.0" text="sexe" textFill="#006590" visible="false">
+      <font>
+         <Font name="High Tower Text Italic" size="31.0" />
+      </font>
+   </Label>
+   <ImageView fx:id="closepic" fitHeight="86.0" fitWidth="32.0" layoutX="965.0" layoutY="142.0" onMouseClicked="#CloseView" pickOnBounds="true" preserveRatio="true" visible="false">
+      <image>
+         <Image url="@../images/icons8-close-100.png" />
+      </image>
+   </ImageView>
+   <Rectangle fx:id="back1" arcHeight="5.0" arcWidth="5.0" height="734.0" layoutY="-8.0" opacity="0.3" stroke="BLACK" strokeType="INSIDE" visible="false" width="1293.0" />
+   <ImageView fx:id="suppView" fitHeight="125.0" fitWidth="298.0" layoutX="509.0" layoutY="317.0" pickOnBounds="true" preserveRatio="true" visible="false">
+      <image>
+         <Image url="@../images/FRAME10.png" />
+      </image>
+   </ImageView>
+   <Label fx:id="label21" layoutX="542.0" layoutY="326.0" text="Suppresion l'Utilisateur" textFill="#006590" visible="false">
+      <font>
+         <Font name="Comic Sans MS Bold" size="21.0" />
+      </font>
+   </Label>
+   <Button fx:id="Annuler" layoutX="674.0" layoutY="368.0" mnemonicParsing="false" onAction="#AnnulerButton" prefHeight="38.0" prefWidth="107.0" style="-fx-background-color: #006590; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="Annuler" textFill="#f8f8f8" visible="false">
+      <font>
+         <Font name="Comic Sans MS" size="15.0" />
+      </font>
+   </Button>
+   <Button fx:id="Confirmé" layoutX="542.0" layoutY="368.0" mnemonicParsing="false" onAction="#ConfirmButton" prefHeight="38.0" prefWidth="107.0" style="-fx-background-color: #006590; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="Confirmé" textFill="#f8f8f8" visible="false">
+      <font>
+         <Font name="Comic Sans MS" size="15.0" />
+      </font>
+   </Button>
+
+   <TextField fx:id="E_Email" layoutX="800.0" layoutY="245.0" prefHeight="32.0" prefWidth="175.0" promptText="Email" style="-fx-background-radius: 10px;" visible="false">
+      <effect>
+         <DropShadow>
+            <color>
+               <Color opacity="0.4236641228199005" />
+            </color>
+         </DropShadow>
+      </effect>
+      <font>
+         <Font name="Comic Sans MS" size="9.0" />
+      </font>
+   </TextField>
+   <TextField fx:id="E_Tel" layoutX="800.0" layoutY="301.0" prefHeight="32.0" prefWidth="175.0" promptText="Télephone" style="-fx-background-radius: 10px;" visible="false">
+      <effect>
+         <DropShadow>
+            <color>
+               <Color opacity="0.4236641228199005" />
+            </color>
+         </DropShadow>
+      </effect>
+      <font>
+         <Font name="Comic Sans MS" size="9.0" />
+      </font>
+   </TextField>
+   <TextField fx:id="E_Adress" layoutX="800.0" layoutY="352.0" prefHeight="32.0" prefWidth="174.0" promptText="Adress" style="-fx-background-radius: 10px;" visible="false">
+      <effect>
+         <DropShadow>
+            <color>
+               <Color opacity="0.4236641228199005" />
+            </color>
+         </DropShadow>
+      </effect>
+      <font>
+         <Font name="Comic Sans MS" size="9.0" />
+      </font>
+   </TextField>
+   <DatePicker fx:id="E_Date" layoutX="806.0" layoutY="407.0" visible="false" />
+   <ComboBox fx:id="E_Sexe" layoutX="802.0" layoutY="446.0" prefHeight="32.0" prefWidth="175.0" promptText="....." style="-fx-background-color: white; -fx-background-radius: 10px;" visible="false">
+      <effect>
+         <DropShadow />
+      </effect></ComboBox>
+   <ComboBox fx:id="E_Role" layoutX="553.0" layoutY="176.0" prefHeight="32.0" prefWidth="175.0" promptText="Role" style="-fx-background-color: white; -fx-background-radius: 10px;" visible="false">
+      <effect>
+         <DropShadow />
+      </effect>
+   </ComboBox>
+   <TextField fx:id="E_Nom" layoutX="273.0" layoutY="371.0" prefHeight="32.0" prefWidth="175.0" promptText="Nom" style="-fx-background-radius: 10px;" visible="false">
+      <effect>
+         <DropShadow>
+            <color>
+               <Color opacity="0.4236641228199005" />
+            </color>
+         </DropShadow>
+      </effect>
+      <font>
+         <Font name="Comic Sans MS" size="9.0" />
+      </font>
+   </TextField>
+   <TextField fx:id="E_Prénon" layoutX="273.0" layoutY="420.0" prefHeight="32.0" prefWidth="175.0" promptText="Prénom" style="-fx-background-radius: 10px;" visible="false">
+      <effect>
+         <DropShadow>
+            <color>
+               <Color opacity="0.4236641228199005" />
+            </color>
+         </DropShadow>
+      </effect>
+      <font>
+         <Font name="Comic Sans MS" size="9.0" />
+      </font>
+   </TextField>
+   <TextField fx:id="E_utilisateur" layoutX="273.0" layoutY="466.0" prefHeight="32.0" prefWidth="175.0" promptText="Utilisateur" style="-fx-background-radius: 10px;" visible="false">
+      <effect>
+         <DropShadow>
+            <color>
+               <Color opacity="0.4236641228199005" />
+            </color>
+         </DropShadow>
+      </effect>
+      <font>
+         <Font name="Comic Sans MS" size="9.0" />
+      </font>
+   </TextField>
+   <Button fx:id="AnnulerEdit" layoutX="891.0" layoutY="528.0" mnemonicParsing="false" onAction="#AnnulerEditButton" prefHeight="38.0" prefWidth="107.0" style="-fx-background-color: #006590; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="Annuler" textFill="#f8f8f8" visible="false">
+      <font>
+         <Font name="Comic Sans MS" size="15.0" />
+      </font>
+   </Button>
+   <Button fx:id="ConfirméEdit" layoutX="771.0" layoutY="528.0" mnemonicParsing="false" onAction="#ConfirméEditButton" prefHeight="38.0" prefWidth="107.0" style="-fx-background-color: #006590; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="Confirmé" textFill="#f8f8f8" visible="false">
+      <font>
+         <Font name="Comic Sans MS" size="15.0" />
+      </font>
+   </Button>
+   <ImageView fitHeight="86.0" fitWidth="163.0" layoutX="1014.0" layoutY="210.0" onMouseClicked="#Go_To_Messages" pickOnBounds="true">
+      <image>
+         <Image url="@../images/FRAME10.png" />
+      </image>
+   </ImageView>
+   <ImageView fitHeight="75.0" fitWidth="90.0" layoutX="1012.0" layoutY="215.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../images/masage.png" />
+      </image>
+   </ImageView>
+   <Label layoutX="1091.0" layoutY="229.0" text="Messages" textFill="#006590">
+      <font>
+         <Font name="Comic Sans MS" size="15.0" />
+      </font>
+   </Label>
+   <Label fx:id="Num_Messages" layoutX="1107.0" layoutY="254.0" prefHeight="25.0" prefWidth="38.0" text="10">
+      <font>
+         <Font name="Comic Sans MS Bold" size="22.0" />
+      </font>
+   </Label>
+
+</AnchorPane>

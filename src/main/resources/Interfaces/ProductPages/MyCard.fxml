@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="303.0" prefWidth="250.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Ali_Controllers.MyCardController">
+   <children>
+      <VBox prefHeight="350.0" prefWidth="251.0">
+         <children>
+            <ImageView fx:id="my_image" fitHeight="150.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/bcg1.png" />
+               </image>
+            </ImageView>
+            <HBox prefHeight="22.0" prefWidth="250.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="101.0" text="Product Id" />
+                  <Label fx:id="my_id" prefHeight="17.0" prefWidth="37.0" text="ID" />
+               </children>
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin>
+            </HBox>
+            <Label fx:id="my_title" text="Title">
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="my_desc" text="Description">
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="my_fsale" text="For Sale">
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="my_price" text="Price">
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="my_date" text="Creation Date">
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin>
+            </Label>
+            <HBox prefHeight="36.0" prefWidth="250.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#delete_item" text="Delete">
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#edit_item" text="Edit">
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</HBox>

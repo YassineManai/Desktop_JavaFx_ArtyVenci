@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox fx:id="box_encherArtist" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="146.0" prefWidth="361.0" style="-fx-background-radius: 15;" styleClass="shadow" stylesheets="@../../css/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Kenza_Controllers.EncherArtistController">
+   <children>
+      <ImageView fx:id="image_enchere" fitHeight="140.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true">
+         <HBox.margin>
+            <Insets />
+         </HBox.margin></ImageView>
+      <VBox alignment="CENTER_LEFT" prefHeight="146.0" prefWidth="192.0" spacing="15.0">
+         <padding>
+            <Insets left="10.0" top="10.0" />
+         </padding>
+         <children>
+            <Label fx:id="titreEnchere" contentDisplay="CENTER" prefHeight="28.0" prefWidth="176.0">
+               <font>
+                  <Font name="Times New Roman Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="prix_initial" contentDisplay="CENTER" layoutX="20.0" layoutY="68.0" prefHeight="108.0" prefWidth="208.0">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="date" layoutX="20.0" layoutY="131.0" prefHeight="73.0" prefWidth="182.0">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="13.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="250.0" prefWidth="182.0">
+               <VBox.margin>
+                  <Insets bottom="6.0" />
+               </VBox.margin>
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" onMouseClicked="#Supprimer" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/bouton-supprimer.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" onMouseClicked="#modifier" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/bouton-modifier.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="tf_nmbreFavori">
+                     <HBox.margin>
+                        <Insets left="25.0" right="-55.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox alignment="BOTTOM_CENTER" prefHeight="25.0" prefWidth="25.0">
+         <children>
+            <ImageView fitHeight="25.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets bottom="6.0" />
+               </HBox.margin>
+               <image>
+                  <Image url="@../../images/prefere.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets left="10.0" />
+   </padding>
+</HBox>

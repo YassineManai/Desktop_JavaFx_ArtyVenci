@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="720.0" maxWidth="1280.0" minHeight="720.0" minWidth="1280.0" prefHeight="720" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Yasser_Controllers.AddForumMembreController">
+   <children>
+      <ImageView fitHeight="720.0" fitWidth="1280.0">
+         <image>
+            <Image url="@../../../images/forum/Back4.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="588.0" fitWidth="608.0" layoutX="336.0" layoutY="66.0">
+         <image>
+            <Image url="@../../../images/forum/BlueBack.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="title_text_field" layoutX="507.0" layoutY="290.0" prefHeight="42.0" prefWidth="252.0" promptText="Title..." />
+      <Label layoutX="538.0" layoutY="246.0" text="Titre Du Forum" textFill="WHITE">
+         <font>
+            <Font name="Bodoni MT Bold" size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="508.0" layoutY="344.0" text="Description Du Forum" textFill="WHITE">
+         <font>
+            <Font name="Bodoni MT Bold" size="29.0" />
+         </font>
+      </Label>
+      <Button fx:id="addbutt_id" layoutX="391.0" layoutY="555.0" mnemonicParsing="false" onAction="#Add_Forum" prefHeight="51.0" prefWidth="157.0" text="Add">
+         <font>
+            <Font name="Cooper Black" size="25.0" />
+         </font>
+      </Button>
+      <Button fx:id="exitButt_id" layoutX="704.0" layoutY="555.0" mnemonicParsing="false" onAction="#ExitAddPage" prefHeight="51.0" prefWidth="158.0" text="exit">
+         <font>
+            <Font name="Cooper Black" size="25.0" />
+         </font>
+      </Button>
+      <TextArea fx:id="desc_text_field" layoutX="459.0" layoutY="379.0" prefHeight="154.0" prefWidth="361.0" promptText="Description" wrapText="true" />
+   </children>
+</AnchorPane>

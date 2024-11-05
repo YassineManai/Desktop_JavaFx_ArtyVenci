@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox fx:id="hbox" alignment="CENTER" maxHeight="185.0" maxWidth="348.0" minHeight="185.0" minWidth="348.0" prefHeight="185.0" prefWidth="348.0" styleClass="Hbox1" stylesheets="@../../css/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Kenza_Controllers.UnEncherController">
+   <children>
+      <ImageView fx:id="imageEncher" fitHeight="160.0" fitWidth="160.0" onMouseClicked="#AfficherEncher" pickOnBounds="true" preserveRatio="true">
+         <HBox.margin>
+            <Insets left="10.0" />
+         </HBox.margin></ImageView>
+      <VBox maxHeight="167.0" maxWidth="210.0" minHeight="154.0" minWidth="169.0" prefHeight="167.0" prefWidth="210.0" styleClass="Hbox" stylesheets="@../../css/styles.css">
+         <children>
+            <Label fx:id="titreEncher" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#AfficherEncher" prefHeight="38.0" prefWidth="158.0" textAlignment="CENTER" textFill="#4a4a4a" underline="true">
+               <font>
+                  <Font name="Times New Roman Bold" size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="3.0" right="3.0" top="17.0" />
+               </VBox.margin></Label>
+            <Label fx:id="prix_initial" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#AfficherEncher" prefHeight="29.0" prefWidth="151.0">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="7.0" />
+               </VBox.margin></Label>
+            <Label fx:id="dateL" onMouseClicked="#AfficherEncher" prefHeight="30.0" prefWidth="144.0" textFill="#666666">
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Times New Roman Italic" size="12.0" />
+               </font></Label>
+            <Label fx:id="dateC" onMouseClicked="#AfficherEncher" prefHeight="30.0" prefWidth="144.0" textFill="#666666">
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Times New Roman Italic" size="12.0" />
+               </font></Label>
+            <ImageView fx:id="statu" fitHeight="30.0" fitWidth="142.0" onMouseClicked="#AfficherEncher" pickOnBounds="true" preserveRatio="true">
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </VBox.margin></ImageView>
+            <HBox alignment="CENTER_RIGHT" prefHeight="42.0" prefWidth="176.0">
+               <children>
+                  <ImageView fx:id="loveFX" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#changerFavori" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
+            <Label fx:id="IDAuction" maxHeight="0.0" maxWidth="0.0" minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="0.0" textFill="WHITE" />
+         </children>
+      </VBox>
+   </children>
+</HBox>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Kenza_Controllers.ListeParticipantsController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../images/cap4.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="400.0" fitWidth="600.0" opacity="0.7" pickOnBounds="true">
+         <image>
+            <Image url="@../../images/cap7.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tv_Participant" layoutX="111.0" layoutY="92.0" prefHeight="239.0" prefWidth="378.0">
+        <columns>
+          <TableColumn fx:id="NomParticipant" prefWidth="139.20001220703125" text="Nom Participant" />
+          <TableColumn fx:id="prix" prefWidth="106.4000244140625" text="Prix" />
+            <TableColumn fx:id="temps" prefWidth="132.800048828125" text="Temps" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,30 @@
+.white-background{
+    -fx-background-color: #ffff;
+}
+
+.transparent{
+    -fx-background-color: rgba(0,0,0,0);
+}
+.round-layout{
+    -fx-border-radius: 50;
+    -fx-background-color: #070707;
+}
+.selected{
+    -fx-background-color: #F3F3F3;
+}
+
+.Hbox{
+    border-style: outset;
+}
+.shadow{
+    -fx-effect: dropShadow(three-pass-box, rgba(0,0,0,0), 10, 0,0,10);
+}
+/* styles.css */
+
+.Hbox1 {
+    -fx-border-color: black;
+    -fx-border-width: 0.5; /* Adjust the width according to your preference */
+    -fx-border-radius: 5; /* Adjust the corner rounding */
+}
+
+

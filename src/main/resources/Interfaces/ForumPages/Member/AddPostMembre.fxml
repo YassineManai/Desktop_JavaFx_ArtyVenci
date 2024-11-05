@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="720.0" maxWidth="1280.0" minHeight="720.0" minWidth="1280.0" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+
+   <children>
+      <ImageView fitHeight="720.0" fitWidth="1374.0">
+         <image>
+            <Image url="@../../../images/forum/White_Back.jpg" />
+         </image>
+      </ImageView>
+      <ToolBar nodeOrientation="LEFT_TO_RIGHT" prefHeight="96.0" prefWidth="1280.0" style="-fx-background-color: #FFFFFF;">
+         <items>
+            <ImageView fitHeight="86.0" fitWidth="112.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../../images/Logo.png" />
+               </image>
+            </ImageView>
+            <Button mnemonicParsing="false" onAction="#Go_To_Home" prefHeight="44.0" prefWidth="117.0" style="-fx-background-color: #FFFFFF;" text="Accueil">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="120.0" layoutY="12.0" mnemonicParsing="false" onAction="#Go_To_Product" prefHeight="44.0" prefWidth="145.0" style="-fx-background-color: #FFFFFF;" text="Magasin">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="213.0" layoutY="27.0" mnemonicParsing="false" onAction="#Go_To_Auction" prefHeight="44.0" prefWidth="101.0" style="-fx-background-color: #FFFFFF;" text="Enchére">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="213.0" layoutY="12.0" mnemonicParsing="false" onAction="#Go_To_Forum" prefHeight="44.0" prefWidth="106.0" style="-fx-background-color: #FFFFFF;" text="Forum" textFill="#0076a8">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="318.0" layoutY="12.0" mnemonicParsing="false" onAction="#Go_To_Event" prefHeight="44.0" prefWidth="143.0" style="-fx-background-color: #FFFFFF;" text="Evènements">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="405.0" layoutY="12.0" mnemonicParsing="false" onAction="#Go_To_Message" prefHeight="44.0" prefWidth="155.0" style="-fx-background-color: #FFFFFF;" text="Messagerie">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="1121.0" layoutY="31.0" mnemonicParsing="false" style="-fx-background-color: #FFFFFF;">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <ImageView fx:id="bell" fitHeight="39.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../../../images/bell.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="usericon" fitHeight="38.0" fitWidth="58.0" onMouseClicked="#ProfileVisit" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../../../images/UserDefaultPicture.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="nav_name" prefHeight="38.0" prefWidth="97.0" text="Bienvenue!">
+               <font>
+                  <Font name="Bell MT Italic" size="22.0" />
+               </font>
+            </Label>
+            <Button fx:id="inscrire" mnemonicParsing="false" onAction="#sinscrire" prefHeight="40.0" prefWidth="82.0" style="-fx-background-color: #0076A8; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="S'inscrire" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font>
+            </Button>
+            <ImageView fx:id="logouticon" fitHeight="36.0" fitWidth="42.0" onMouseClicked="#Logout" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../../../images/arrow.png" />
+               </image>
+            </ImageView>
+         </items>
+      </ToolBar>
+      <ScrollPane layoutX="132.0" layoutY="174.0" prefHeight="510.0" prefWidth="700.0">
+         <content>
+            <VBox fx:id="id_vbox_posts" prefHeight="499.0" prefWidth="534.0" />
+         </content>
+      </ScrollPane>
+      <Label fx:id="forum_name_id" layoutX="132.0" layoutY="99.0" prefHeight="75.0" prefWidth="890.0" text="Forum Name">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Label>
+      <Button fx:id="Add_Post_Butt_Id" layoutX="1171.0" layoutY="174.0" mnemonicParsing="false" onAction="#AddForum" prefHeight="61.0" prefWidth="58.0" style="-fx-background-color: #0076a8; -fx-border-color: black;" text="+" textFill="WHITE">
+         <font>
+            <Font name="Bodoni MT Bold" size="31.0" />
+         </font>
+      </Button>
+
+      <AnchorPane layoutX="904.0" layoutY="174.0" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Rectangle arcHeight="35.0" arcWidth="5.0" fill="#2081ab" height="200.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-height: 35px; -fx-arc-width: 35px;" width="200.0" />
+            <Label layoutX="48.0" text="Top Post" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="12.0" layoutY="48.0" text="Created By : " textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="top_post_user_id" layoutX="12.0" layoutY="74.0" text="changeme" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="top_likes_is" layoutX="12.0" layoutY="135.0" text="changeme" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="12.0" layoutY="109.0" text="Likes :" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="904.0" layoutY="412.0" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Rectangle arcHeight="35.0" arcWidth="5.0" fill="#2081ab" height="200.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-height: 35px; -fx-arc-width: 35px;" width="200.0" />
+            <Label layoutX="47.0" text="Statistics" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="12.0" layoutY="48.0" text="Total Posts :" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="posts_num_id" layoutX="12.0" layoutY="74.0" text="changeme" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="likes_tot_id" layoutX="12.0" layoutY="135.0" text="changeme" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="12.0" layoutY="109.0" text="Total Likes :" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Button fx:id="OrderButt" layoutX="1171.0" layoutY="261.0" mnemonicParsing="false" onAction="#OrderByLikeNumber" style="-fx-background-color: #0076a8; -fx-border-color: Black;" text="Order By" textFill="WHITE" />
+      <ChoiceBox fx:id="box" layoutX="1126.0" layoutY="301.0" prefWidth="150.0" />
+      <Button fx:id="PrintPDF_butt" layoutX="1155.0" layoutY="416.0" mnemonicParsing="false" onAction="#PrintPDF" style="-fx-background-color: #0076a8; -fx-border-color: Black;" text="Export To PDF" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <ImageView fx:id="Qr_id" fitHeight="150.0" fitWidth="150.0" layoutX="1116.0" layoutY="556.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>

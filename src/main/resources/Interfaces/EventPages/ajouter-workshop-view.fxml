@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Montaha_Controllers.AjouterWorkshopView">
+    <children>
+      <ImageView fitHeight="721.0" fitWidth="1286.0" layoutX="-3.0" opacity="0.53">
+         <image>
+            <Image url="@../../images/bg_nawar.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="684.0" layoutY="209.0" prefHeight="85.0" prefWidth="595.0" style="-fx-background-color: white;">
+         <children>
+            <ImageView fitHeight="580.0" fitWidth="844.0" layoutX="98.0" layoutY="-68.0">
+               <image>
+                  <Image url="@../../images/3orsa.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="48.0" fitWidth="61.0" layoutX="482.0" layoutY="-43.0" rotate="-20.0">
+               <image>
+                  <Image url="@../../images/faracha_melyena.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="503.0" layoutY="34.0" mnemonicParsing="false" onAction="#gotoEvent" opacity="0.86" style="-fx-background-color: #0076A8; -fx-background-radius: 50;" text="Events" textFill="WHITE">
+               <font>
+                  <Font name="Perpetua Bold" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+        <Pane layoutX="31.0" layoutY="194.0" opacity="0.91" prefHeight="429.0" prefWidth="669.0" style="-fx-background-radius: 25; -fx-border-radius: 25; -fx-border-width: 3; -fx-background-color: #00355B;">
+            <effect>
+                <ColorAdjust />
+            </effect>
+            <children>
+            <ImageView fitHeight="436.0" fitWidth="707.0" layoutX="-18.0" layoutY="-3.0">
+               <image>
+                  <Image url="@../../images/bg_m9awsa.png" />
+               </image>
+            </ImageView>
+                <Pane layoutX="-33.0" layoutY="14.0" prefHeight="85.0" prefWidth="734.0" style="-fx-background-color: white;">
+               <children>
+                  <ImageView fitHeight="589.0" fitWidth="1049.0" layoutX="97.0" layoutY="-57.0">
+                     <image>
+                        <Image url="@../../images/temthel.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="14.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Créer une " wrappingWidth="201.4365234375">
+                     <font>
+                        <Font name="Perpetua" size="30.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="125.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" w o r k s h o p">
+                     <font>
+                        <Font name="Perpetua Bold Italic" size="33.0" />
+                     </font>
+                  </Text>
+                  <Button layoutX="192.0" layoutY="338.0" mnemonicParsing="false" onAction="#modifierWorkshop" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: white; -fx-background-radius: 50;" text="Modifier">
+                     <font>
+                        <Font name="Perpetua Bold Italic" size="20.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="66.0" fitWidth="92.0" layoutX="10.0" layoutY="376.0" rotate="28.8">
+                     <image>
+                        <Image url="@../../images/faracha_melyena.png" />
+                     </image>
+                  </ImageView>
+                      <Button layoutX="205.0" layoutY="255.0" mnemonicParsing="false" onAction="#uploadImage" prefHeight="24.0" prefWidth="74.0" style="-fx-background-color: white; -fx-background-radius: 15;" text="Upload">
+                          <font>
+                              <Font name="Perpetua" size="14.0" />
+                          </font>
+                      </Button>
+                      <TextArea fx:id="tadescription" layoutX="315.0" layoutY="139.0" prefHeight="146.0" prefWidth="181.0" promptText="Description" />
+                  <ScrollPane layoutX="791.0" layoutY="-24.0" prefHeight="491.0" prefWidth="337.0">
+                     <content>
+                        <GridPane fx:id="grid">
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                        </GridPane>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </Pane>
+                <TextField fx:id="tftitre" layoutX="14.0" layoutY="153.0" prefHeight="34.0" prefWidth="136.0" promptText="Titre" style="-fx-background-radius: 15;" />
+                <ComboBox fx:id="cbevenement" layoutX="14.0" layoutY="206.0" prefHeight="34.0" prefWidth="136.0" promptText="Evenement" style="-fx-background-color: white; -fx-background-radius: 15px;" />
+                <TextField fx:id="tfimage" layoutX="14.0" layoutY="260.0" prefHeight="34.0" prefWidth="136.0" promptText="image" style="-fx-background-radius: 15;" />
+            <Button layoutX="32.0" layoutY="352.0" mnemonicParsing="false" onAction="#ajouterWorkshop" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: white; -fx-background-radius: 50;" text="Créer">
+               <font>
+                  <Font name="Perpetua Bold Italic" size="20.0" />
+               </font>
+            </Button>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

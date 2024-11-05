@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720" prefWidth="1298.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Asma_Controllers.HomepageController">
+    <children>
+        <ImageView fitHeight="720" fitWidth="1317.0" layoutX="-1.0" layoutY="-1.0" pickOnBounds="true">
+            <image>
+                <Image url="@../../images/Background.png" />
+            </image>
+        </ImageView>
+
+        <ToolBar nodeOrientation="LEFT_TO_RIGHT" prefHeight="96.0" prefWidth="1317.0" style="-fx-background-color: #FFFFFF;">
+            <items>
+                <ImageView fitHeight="86.0" fitWidth="112.0" pickOnBounds="true">
+                    <image>
+                        <Image url="@../../images/logo.PNG" />
+                    </image>
+                </ImageView>
+                <Button mnemonicParsing="false" onAction="#Go_To_Home" prefHeight="44.0" prefWidth="117.0" style="-fx-background-color: #FFFFFF;" text="Accueil">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Button>
+                <Button layoutX="120.0" layoutY="12.0" mnemonicParsing="false" onAction="#Go_To_Product" prefHeight="44.0" prefWidth="145.0" style="-fx-background-color: #FFFFFF;" text="Magasin">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Button>
+                <Button layoutX="213.0" layoutY="27.0" mnemonicParsing="false" onAction="#Go_To_Auction" prefHeight="44.0" prefWidth="101.0" style="-fx-background-color: #FFFFFF;" text="Enchére">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Button>
+                <Button layoutX="213.0" layoutY="12.0" mnemonicParsing="false" onAction="#Go_To_Forum" prefHeight="44.0" prefWidth="106.0" style="-fx-background-color: #FFFFFF;" text="Forum">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Button>
+                <Button layoutX="318.0" layoutY="12.0" mnemonicParsing="false" onAction="#Go_To_Event" prefHeight="44.0" prefWidth="143.0" style="-fx-background-color: #FFFFFF;" text="Evènements">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Button>
+                <Button layoutX="405.0" layoutY="12.0" mnemonicParsing="false" onAction="#Go_To_Message" prefHeight="44.0" prefWidth="155.0" style="-fx-background-color: #FFFFFF;" text="Messagerie" textFill="#0076a8">
+                    <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                    </font>
+                </Button>
+                <Button layoutX="1121.0" layoutY="31.0" mnemonicParsing="false" style="-fx-background-color: #FFFFFF;">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Button>
+                <ImageView fx:id="bell" fitHeight="39.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                    <image>
+                        <Image url="@../../images/bell.png" />
+                    </image>
+                </ImageView>
+                <ImageView fx:id="usericon" fitHeight="38.0" fitWidth="58.0" onMouseClicked="#ProfileVisit" pickOnBounds="true" preserveRatio="true" visible="false">
+                    <image>
+                        <Image url="@../../images/pers.PNG" />
+                    </image>
+                </ImageView>
+                <Label fx:id="nav_name" prefHeight="38.0" prefWidth="97.0" text="Bienvenue!">
+                    <font>
+                        <Font name="Bell MT Italic" size="22.0" />
+                    </font>
+                </Label>
+                <Button fx:id="inscrire" mnemonicParsing="false" onAction="#sinscrire" prefHeight="40.0" prefWidth="82.0" style="-fx-background-color: #0076A8; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="S'inscrire" textFill="WHITE" visible="false">
+                    <font>
+                        <Font name="Comic Sans MS" size="12.0" />
+                    </font>
+                </Button>
+                <ImageView fx:id="logouticon" fitHeight="36.0" fitWidth="42.0" onMouseClicked="#Logout" pickOnBounds="true" preserveRatio="true" visible="false">
+                    <image>
+                        <Image url="@../../images/arrow.png" />
+                    </image>
+                </ImageView>
+            </items>
+        </ToolBar>
+        <ScrollPane fx:id="discussions" layoutX="712.0" layoutY="181.0" prefHeight="497.0" prefWidth="440.0" style="-fx-background-color: #B4DBDC;">
+            <content>
+                <VBox fx:id="dis" prefHeight="90.0" prefWidth="441.0" style="-fx-background-color: #B4DBDC;" />
+            </content>
+        </ScrollPane>
+
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0077a6b0" height="262.0" layoutX="58.0" layoutY="301.0" stroke="BLACK" strokeType="INSIDE" width="531.0" />
+        <Button fx:id="chercher" layoutX="492.0" layoutY="331.0" mnemonicParsing="false" style="-fx-background-color: transparent;" />
+
+        <Button fx:id="addDis" layoutX="14.0" layoutY="185.0" mnemonicParsing="false" style="-fx-background-color: transparent;" />
+
+        <Button fx:id="deleteDis" layoutX="69.0" layoutY="192.0" mnemonicParsing="false" style="-fx-background-color: transparent;" />
+        <Button fx:id="create" layoutX="224.0" layoutY="465.0" mnemonicParsing="false" onAction="#CreateNewDiscussion" style="-fx-background-color: #B4DBDC;" text="Create new discussion">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Button>
+        <Button fx:id="Search" layoutX="77.0" layoutY="357.0" mnemonicParsing="false" onAction="#SearchDiscussion" style="-fx-background-color: #B4DBDC;" text="   search">
+            <font>
+                <Font size="18.0" />
+            </font>
+            <graphic>
+                <ImageView fitHeight="36.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../images/loupe.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+
+    </children>
+</AnchorPane>

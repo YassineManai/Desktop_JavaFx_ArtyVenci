@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.Button?>
+<AnchorPane maxHeight="720.0" maxWidth="1280.0" minHeight="720.0" minWidth="1280.0" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Kenza_Controllers.EnchersController">
+   <Accordion layoutX="-1.0" layoutY="1.0" prefHeight="96.0" prefWidth="1299.0" style="-fx-background-color: #ffff;" />
+   <Accordion layoutX="325.0" layoutY="97.0" prefHeight="58.0" prefWidth="630.0" style="-fx-background-color: #C9CACC;" />
+   <ImageView fitHeight="622.0" fitWidth="1300.0" layoutY="97.0" pickOnBounds="true">
+      <image>
+         <Image url="@../../images/cap16.png" />
+      </image>
+   </ImageView>
+
+   <ToolBar layoutY="1.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="96.0" prefWidth="1280.0" style="-fx-background-color: #FFFFFF;">
+      <items>
+         <ImageView fitHeight="86.0" fitWidth="112.0" pickOnBounds="true">
+            <image>
+               <Image url="@../../images/logo.PNG" />
+            </image>
+         </ImageView>
+         <Button mnemonicParsing="false" onAction="#Go_To_Home" prefHeight="44.0" prefWidth="117.0" style="-fx-background-color: #FFFFFF;" text="Accueil">
+            <font>
+               <Font size="20.0" />
+            </font>
+         </Button>
+         <Button layoutX="120.0" layoutY="12.0" mnemonicParsing="false" onAction="#Go_To_Product" prefHeight="44.0" prefWidth="145.0" style="-fx-background-color: #FFFFFF;" text="Magasin">
+            <font>
+               <Font size="20.0" />
+            </font>
+         </Button>
+         <Button layoutX="213.0" layoutY="27.0" mnemonicParsing="false" onAction="#Go_To_Auction" prefHeight="44.0" prefWidth="101.0" style="-fx-background-color: #FFFFFF;" text="Enchére" textFill="#0076a8">
+            <font>
+               <Font name="System Bold Italic" size="20.0" />
+            </font>
+         </Button>
+         <Button layoutX="213.0" layoutY="12.0" mnemonicParsing="false" onAction="#Go_To_Forum" prefHeight="44.0" prefWidth="106.0" style="-fx-background-color: #FFFFFF;" text="Forum">
+            <font>
+               <Font size="20.0" />
+            </font>
+         </Button>
+         <Button layoutX="318.0" layoutY="12.0" mnemonicParsing="false" onAction="#Go_To_Event" prefHeight="44.0" prefWidth="143.0" style="-fx-background-color: #FFFFFF;" text="Evènements">
+            <font>
+               <Font size="20.0" />
+            </font>
+         </Button>
+         <Button layoutX="405.0" layoutY="12.0" mnemonicParsing="false" onAction="#Go_To_Message" prefHeight="44.0" prefWidth="155.0" style="-fx-background-color: #FFFFFF;" text="Messagerie">
+            <font>
+               <Font size="20.0" />
+            </font>
+         </Button>
+         <Button layoutX="1121.0" layoutY="31.0" mnemonicParsing="false" style="-fx-background-color: #FFFFFF;">
+            <font>
+               <Font size="20.0" />
+            </font>
+         </Button>
+         <ImageView fx:id="bell" fitHeight="39.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" visible="false">
+            <image>
+               <Image url="@../../images/bell.png" />
+            </image>
+         </ImageView>
+         <ImageView fx:id="usericon" fitHeight="38.0" fitWidth="58.0" onMouseClicked="#ProfileVisit" pickOnBounds="true" preserveRatio="true" visible="false">
+            <image>
+               <Image url="@../../images/pers.PNG" />
+            </image>
+         </ImageView>
+         <Label fx:id="nav_name" prefHeight="38.0" prefWidth="97.0" text="Bienvenue!">
+            <font>
+               <Font name="Bell MT Italic" size="22.0" />
+            </font>
+         </Label>
+         <Button fx:id="inscrire" mnemonicParsing="false" onAction="#sinscrire" prefHeight="40.0" prefWidth="82.0" style="-fx-background-color: #0076A8; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="S'inscrire" textFill="WHITE" visible="false">
+            <font>
+               <Font name="Comic Sans MS" size="12.0" />
+            </font>
+         </Button>
+         <ImageView fx:id="logouticon" fitHeight="36.0" fitWidth="42.0" onMouseClicked="#Logout" pickOnBounds="true" preserveRatio="true" visible="false">
+            <image>
+               <Image url="@../../images/arrow.png" />
+            </image>
+         </ImageView>
+      </items>
+   </ToolBar>
+   <ScrollPane hbarPolicy="NEVER" layoutX="87.0" layoutY="241.0" prefHeight="467.0" prefWidth="1115.0" AnchorPane.leftAnchor="87.0" AnchorPane.rightAnchor="98.60000000000014">
+      <content>
+         <VBox alignment="CENTER" prefHeight="463.0" prefWidth="1100.0">
+            <children>
+               <HBox fx:id="hboxFX" alignment="CENTER" prefHeight="459.0" prefWidth="1100.0">
+                  <opaqueInsets>
+                     <Insets left="15.0" />
+                  </opaqueInsets></HBox>
+            </children>
+         </VBox>
+      </content>
+   </ScrollPane>
+
+   <HBox alignment="CENTER" layoutX="326.0" layoutY="109.0" prefHeight="44.0" prefWidth="631.0">
+      <children>
+         <TextField fx:id="id_searcj" prefHeight="40.0" prefWidth="435.0" promptText="Search">
+            <font>
+               <Font name="Times New Roman Italic" size="12.0" />
+            </font></TextField>
+         <ImageView fitHeight="30.0" fitWidth="30.0" onMouseClicked="#searchForAuction" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../images/loupe.png" />
+            </image>
+         </ImageView>
+      </children>
+   </HBox>
+   <Label layoutX="110.0" layoutY="191.0" onMouseClicked="#tousEnchers" prefHeight="44.0" prefWidth="226.0" text="Tous les enchères">
+      <font>
+         <Font name="Times New Roman Bold Italic" size="25.0" />
+      </font>
+   </Label>
+   <ImageView fx:id="imageAfficherEncheres" fitHeight="80.0" fitWidth="50.0" layoutX="1003.0" layoutY="163.0" onMouseClicked="#filtrerLive" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../images/instagram-en-direct.png" />
+      </image>
+   </ImageView>
+</AnchorPane>

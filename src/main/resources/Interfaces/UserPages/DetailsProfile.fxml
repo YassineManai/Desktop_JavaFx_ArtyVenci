@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="360.0" minWidth="360.0" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Yassine_Controllers.DetailsProfileController">
+
+    <ImageView fitHeight="632.0" fitWidth="1289.0" layoutX="-6.0" layoutY="87.0" pickOnBounds="true">
+        <image>
+            <Image url="@../../images/background5.png" />
+        </image>
+    </ImageView>
+    <ToolBar layoutY="1.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="96.0" prefWidth="1280.0" style="-fx-background-color: #FFFFFF;">
+        <items>
+            <ImageView fitHeight="86.0" fitWidth="107.0" pickOnBounds="true">
+                <image>
+                    <Image url="@../../images/logo.PNG" />
+                </image>
+            </ImageView>
+            <Button mnemonicParsing="false" onAction="#Go_To_Home" prefHeight="44.0" prefWidth="144.0" style="-fx-background-color: #FFFFFF;" text="Accueil">
+                <font>
+                    <Font size="20.0" />
+                </font>
+            </Button>
+            <Button layoutX="120.0" layoutY="12.0" mnemonicParsing="false" onAction="#Go_To_Product" prefHeight="44.0" prefWidth="145.0" style="-fx-background-color: #FFFFFF;" text="Magasin">
+                <font>
+                    <Font size="20.0" />
+                </font>
+            </Button>
+            <Button layoutX="213.0" layoutY="27.0" mnemonicParsing="false" onAction="#Go_To_Auction" prefHeight="44.0" prefWidth="101.0" style="-fx-background-color: #FFFFFF;" text="Enchére">
+                <font>
+                    <Font size="20.0" />
+                </font>
+            </Button>
+            <Button layoutX="213.0" layoutY="12.0" mnemonicParsing="false" onAction="#Go_To_Forum" prefHeight="44.0" prefWidth="106.0" style="-fx-background-color: #FFFFFF;" text="Forum">
+                <font>
+                    <Font size="20.0" />
+                </font>
+            </Button>
+            <Button layoutX="318.0" layoutY="12.0" mnemonicParsing="false" onAction="#Go_To_Event" prefHeight="44.0" prefWidth="143.0" style="-fx-background-color: #FFFFFF;" text="Evènements">
+                <font>
+                    <Font size="20.0" />
+                </font>
+            </Button>
+            <Button layoutX="405.0" layoutY="12.0" mnemonicParsing="false" onAction="#Go_To_Message" prefHeight="44.0" prefWidth="155.0" style="-fx-background-color: #FFFFFF;" text="Messagerie">
+                <font>
+                    <Font size="20.0" />
+                </font>
+            </Button>
+            <Button layoutX="1121.0" layoutY="31.0" mnemonicParsing="false" style="-fx-background-color: #FFFFFF;">
+                <font>
+                    <Font size="20.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="bell" fitHeight="39.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@../../images/bell.png" />
+                </image>
+            </ImageView>
+            <ImageView fx:id="usericon" fitHeight="38.0" fitWidth="58.0" onMouseClicked="#ProfileVisit" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@../../images/pers.PNG" />
+                </image>
+            </ImageView>
+            <Label fx:id="nav_name" prefHeight="38.0" prefWidth="82.0" text="Yassine">
+                <font>
+                    <Font name="Bell MT Italic" size="22.0" />
+                </font>
+            </Label>
+            <ImageView fx:id="logouticon" fitHeight="36.0" fitWidth="42.0" onMouseClicked="#Logout" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@../../images/arrow.png" />
+                </image>
+            </ImageView>
+        </items>
+    </ToolBar>
+    <ImageView fitHeight="93.0" fitWidth="1289.0" layoutX="-4.0" layoutY="200.0" pickOnBounds="true">
+        <image>
+            <Image url="@../../images/frame11.png" />
+        </image>
+    </ImageView>
+    <Button layoutX="523.0" layoutY="227.0" mnemonicParsing="false" onAction="#Details" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: lightblue; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="A propos de l'artiste" textFill="WHITE">
+        <font>
+            <Font name="Comic Sans MS" size="12.0" />
+        </font>
+    </Button>
+    <Button layoutX="742.0" layoutY="227.0" mnemonicParsing="false" onAction="#Gallerie" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: #0076A8; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="Gallerie" textFill="WHITE">
+        <font>
+            <Font name="Comic Sans MS" size="12.0" />
+        </font>
+    </Button>
+
+    <Button layoutX="957.0" layoutY="227.0" mnemonicParsing="false" onAction="#Post_Blog" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: #0076A8; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="Posts/Blog" textFill="WHITE">
+        <font>
+            <Font name="Comic Sans MS" size="12.0" />
+        </font>
+    </Button>
+    <Label fx:id="statue_name" layoutX="106.0" layoutY="216.0" text="Yassine Manai">
+        <font>
+            <Font name="Bell MT Italic" size="26.0" />
+        </font>
+    </Label>
+    <ImageView fitHeight="355.0" fitWidth="972.0" layoutX="176.0" layoutY="349.0" pickOnBounds="true">
+        <image>
+            <Image url="@../../images/FRAME10.png" />
+        </image>
+    </ImageView>
+    <Label layoutX="255.0" layoutY="388.0" text="Nom :">
+        <font>
+            <Font name="Bell MT Italic" size="26.0" />
+        </font>
+    </Label>
+    <ImageView fitHeight="40.0" fitWidth="38.0" layoutX="209.0" layoutY="386.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../../images/icons8-name-50.png" />
+        </image>
+    </ImageView>
+    <Label layoutX="255.0" layoutY="436.0" text="Prénom :">
+        <font>
+            <Font name="Bell MT Italic" size="26.0" />
+        </font>
+    </Label>
+    <ImageView fitHeight="40.0" fitWidth="38.0" layoutX="209.0" layoutY="434.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../../images/icons8-name-50.png" />
+        </image>
+    </ImageView>
+
+    <Label layoutX="255.0" layoutY="481.0" text="Email :">
+        <font>
+            <Font name="Bell MT Italic" size="26.0" />
+        </font>
+    </Label>
+    <ImageView fitHeight="40.0" fitWidth="38.0" layoutX="209.0" layoutY="479.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../../images/icons8-email-50.png" />
+        </image>
+    </ImageView>
+    <Label layoutX="255.0" layoutY="526.0" text="Adress :">
+        <font>
+            <Font name="Bell MT Italic" size="26.0" />
+        </font>
+    </Label>
+    <ImageView fitHeight="40.0" fitWidth="38.0" layoutX="209.0" layoutY="524.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../../images/icons8-country-50.png" />
+        </image>
+    </ImageView>
+    <Label layoutX="255.0" layoutY="572.0" text="Télephone :">
+        <font>
+            <Font name="Bell MT Italic" size="26.0" />
+        </font>
+    </Label>
+    <ImageView fitHeight="40.0" fitWidth="38.0" layoutX="209.0" layoutY="570.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../../images/icons8-telephone-50.png" />
+        </image>
+    </ImageView>
+    <Label layoutX="255.0" layoutY="616.0" text="Date de Naissance :">
+        <font>
+            <Font name="Bell MT Italic" size="26.0" />
+        </font>
+    </Label>
+    <ImageView fitHeight="40.0" fitWidth="38.0" layoutX="209.0" layoutY="614.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../../images/icons8-date-50.png" />
+        </image>
+    </ImageView>
+    <ImageView fx:id="profile_pic" fitHeight="156.0" fitWidth="166.0" layoutX="812.0" layoutY="405.0" onMouseClicked="#AddImage" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../../images/Avatar.png" />
+        </image>
+    </ImageView>
+    <Button layoutX="995.0" layoutY="636.0" mnemonicParsing="false" onAction="#Annuler_Edit" prefHeight="40.0" prefWidth="110.0" style="-fx-background-color: #0076A8; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="Annuler" textFill="WHITE">
+        <font>
+            <Font name="Comic Sans MS" size="12.0" />
+        </font>
+    </Button>
+    <TextField fx:id="id_Nom" layoutX="411.0" layoutY="390.0" prefHeight="31.0" prefWidth="135.0" promptText="Nom" style="-fx-background-radius: 10px;">
+        <effect>
+            <DropShadow>
+                <color>
+                    <Color opacity="0.4236641228199005" />
+                </color>
+            </DropShadow>
+        </effect>
+        <font>
+            <Font name="Comic Sans MS" size="9.0" />
+        </font>
+    </TextField>
+   <TextField fx:id="id_prenom" layoutX="411.0" layoutY="438.0" prefHeight="31.0" prefWidth="135.0" promptText="Nom" style="-fx-background-radius: 10px;">
+      <effect>
+         <DropShadow>
+            <color>
+               <Color opacity="0.4236641228199005" />
+            </color>
+         </DropShadow>
+      </effect>
+      <font>
+         <Font name="Comic Sans MS" size="9.0" />
+      </font>
+   </TextField>
+   <Label fx:id="id_email" layoutX="440.0" layoutY="481.0" text="Email :">
+      <font>
+         <Font name="Bell MT Italic" size="26.0" />
+      </font>
+   </Label>
+   <TextField fx:id="id_adress" layoutX="409.0" layoutY="528.0" prefHeight="31.0" prefWidth="135.0" promptText="Adress" style="-fx-background-radius: 10px;">
+      <effect>
+         <DropShadow>
+            <color>
+               <Color opacity="0.4236641228199005" />
+            </color>
+         </DropShadow>
+      </effect>
+      <font>
+         <Font name="Comic Sans MS" size="9.0" />
+      </font>
+   </TextField>
+   <TextField fx:id="id_tele" layoutX="409.0" layoutY="574.0" prefHeight="31.0" prefWidth="135.0" promptText="Télephone" style="-fx-background-radius: 10px;">
+      <effect>
+         <DropShadow>
+            <color>
+               <Color opacity="0.4236641228199005" />
+            </color>
+         </DropShadow>
+      </effect>
+      <font>
+         <Font name="Comic Sans MS" size="9.0" />
+      </font>
+   </TextField>
+   <DatePicker fx:id="id_date" layoutX="459.0" layoutY="621.0" prefHeight="25.0" prefWidth="140.0" />
+   <Button layoutX="881.0" layoutY="636.0" mnemonicParsing="false" onAction="#Confirme_Edit" prefHeight="40.0" prefWidth="110.0" style="-fx-background-color: #0076A8; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="Confirmer" textFill="WHITE">
+      <font>
+         <Font name="Comic Sans MS" size="12.0" />
+      </font>
+   </Button>
+   <Label layoutX="825.0" layoutY="559.0" text="Photo de profile">
+      <font>
+         <Font name="Bell MT Italic" size="26.0" />
+      </font>
+   </Label>
+   <TextField fx:id="id_user" layoutX="639.0" layoutY="375.0" prefHeight="31.0" prefWidth="38.0" promptText="Nom" style="-fx-background-radius: 10px;" visible="false">
+      <effect>
+         <DropShadow>
+            <color>
+               <Color opacity="0.4236641228199005" />
+            </color>
+         </DropShadow>
+      </effect>
+      <font>
+         <Font name="Comic Sans MS" size="9.0" />
+      </font>
+   </TextField>
+   <Button layoutX="343.0" layoutY="661.0" mnemonicParsing="false" onAction="#Change_mdp" prefHeight="31.0" prefWidth="156.0" style="-fx-background-color: #0076A8; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="Changer Mot de passe" textFill="WHITE">
+      <font>
+         <Font name="Comic Sans MS" size="12.0" />
+      </font>
+   </Button>
+   <Rectangle fx:id="back" arcHeight="5.0" arcWidth="5.0" height="727.0" layoutX="-7.0" layoutY="-1.0" opacity="0.31" stroke="BLACK" strokeType="INSIDE" visible="false" width="1296.0" />
+   <ImageView fx:id="mdp_change" fitHeight="329.0" fitWidth="407.0" layoutX="437.0" layoutY="209.0" pickOnBounds="true" visible="false">
+      <image>
+         <Image url="@../../images/FRAME10.png" />
+      </image>
+   </ImageView>
+   <Label fx:id="label1" layoutX="455.0" layoutY="224.0" text="Modifier Votre Mot de passe" visible="false">
+      <font>
+         <Font name="Bell MT Bold" size="29.0" />
+      </font>
+   </Label>
+    <PasswordField fx:id="id_mdp" accessibleRole="TEXT" layoutX="462.0" layoutY="335.0" prefHeight="31.0" prefWidth="353.0" promptText="Mot de passe" style="-fx-background-radius: 10px;" visible="false">
+        <font>
+            <Font name="Comic Sans MS" size="9.0" />
+        </font>
+        <effect>
+            <DropShadow>
+                <color>
+                    <Color opacity="0.45038166642189026" />
+                </color>
+            </DropShadow>
+        </effect>
+    </PasswordField>
+   <PasswordField fx:id="id_newmdp" accessibleRole="TEXT" layoutX="460.0" layoutY="396.0" prefHeight="31.0" prefWidth="353.0" promptText="Confirme mot de passe" style="-fx-background-radius: 10px;" visible="false">
+      <font>
+         <Font name="Comic Sans MS" size="9.0" />
+      </font>
+      <effect>
+         <DropShadow>
+            <color>
+               <Color opacity="0.45038166642189026" />
+            </color>
+         </DropShadow>
+      </effect>
+   </PasswordField>
+   <Label fx:id="label2" layoutX="494.0" layoutY="262.0" text="Entrer votre mot de passe actuel et votre " visible="false">
+      <font>
+         <Font name="Bell MT" size="17.0" />
+      </font>
+   </Label>
+   <Label fx:id="label3" layoutX="560.0" layoutY="280.0" text="nouveaux mot de passe." visible="false">
+      <font>
+         <Font name="Bell MT" size="17.0" />
+      </font>
+   </Label>
+   <Label fx:id="label4" layoutX="455.0" layoutY="308.0" text="Mot de passe actuel :" visible="false">
+      <font>
+         <Font name="Comic Sans MS Bold" size="15.0" />
+      </font>
+   </Label>
+   <Label fx:id="label5" layoutX="455.0" layoutY="369.0" text="Nouveau mot de passe :" visible="false">
+      <font>
+         <Font name="Comic Sans MS Bold" size="15.0" />
+      </font>
+   </Label>
+   <Label fx:id="label6" layoutX="458.0" layoutY="432.0" text="Confirm mot de passe :" visible="false">
+      <font>
+         <Font name="Comic Sans MS Bold" size="15.0" />
+      </font>
+   </Label>
+   <PasswordField fx:id="id_confirm" accessibleRole="TEXT" layoutX="464.0" layoutY="458.0" prefHeight="31.0" prefWidth="353.0" promptText="Confirme mot de passe" style="-fx-background-radius: 10px;" visible="false">
+      <font>
+         <Font name="Comic Sans MS" size="9.0" />
+      </font>
+      <effect>
+         <DropShadow>
+            <color>
+               <Color opacity="0.45038166642189026" />
+            </color>
+         </DropShadow>
+      </effect>
+   </PasswordField>
+   <Button fx:id="Anuller_mdp" layoutX="760.0" layoutY="497.0" mnemonicParsing="false" onAction="#Anuller_mdp" prefHeight="31.0" prefWidth="73.0" style="-fx-background-color: #0076A8; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="Annuler" textFill="WHITE" visible="false">
+      <font>
+         <Font name="Comic Sans MS" size="12.0" />
+      </font>
+   </Button>
+   <Button fx:id="modiermdp" layoutX="678.0" layoutY="497.0" mnemonicParsing="false" onAction="#ModifierMdp" prefHeight="31.0" prefWidth="73.0" style="-fx-background-color: #0076A8; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="Modifier" textFill="WHITE" visible="false">
+      <font>
+         <Font name="Comic Sans MS" size="12.0" />
+      </font>
+   </Button>
+
+
+
+
+</AnchorPane>
